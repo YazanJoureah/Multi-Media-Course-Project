@@ -9,241 +9,1262 @@
     <link rel="stylesheet" href="../styles/animations.css" />
   </head>
   <body>
+    <!-- Header -->
     <header class="header">
       <div class="container">
         <div class="logo-nav-container">
           <div class="logo">
             <img
-              src="../images/logo.webp"
-              alt="شعار الموقع"
+              src="images/logo.webp"
+              alt="شعار مقرر نظم الوسائط المتعددة"
               width="120"
               height="60"
             />
             <span class="logo-text">نظم الوسائط المتعددة</span>
           </div>
+
+          <button class="nav-toggle" aria-label="فتح القائمة">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
           <nav class="navigation">
             <ul class="nav-list">
-              <li><a href="../index.html">الرئيسية</a></li>
-              <li><a href="../about.html">عن المقرر</a></li>
-              <li><a href="../topics.html" class="active">المواضيع</a></li>
-              <li><a href="../videos.html">الفيديوهات</a></li>
+              <li><a href="../index.html" class="nav-link">الرئيسية</a></li>
+              <li><a href="../about.html" class="nav-link">عن المقرر</a></li>
+              <li class="dropdown">
+                <a class="nav-link">المواضيع</a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="./visual-media.html"
+                      >الوسائط البصرية - الصور والفيديو</a
+                    >
+                  </li>
+                  <li>
+                    <a href="./compression-techniques.html">تقنيات الضغط</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="../ai-gallery.html" class="nav-link"
+                  >معرض الذكاء الاصطناعي</a
+                >
+              </li>
             </ul>
           </nav>
         </div>
       </div>
     </header>
 
-    <main id="main-content">
-      <section class="hero">
-        <div class="container">
-          <h1 class="hero-title">تقنيات الضغط للوسائط المتعددة</h1>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="hero-title">تقنيات الضغط في الوسائط المتعددة</h1>
           <p class="hero-description">
-            اكتشف كيف يتم تقليل أحجام الملفات مع الحفاظ على الجودة
+            اكتشف عالم تقنيات ضغط البيانات التي تُعد العمود الفقري للتحول
+            الرقمي، وتمكننا من تحقيق توازن حيوي بين الحفاظ على الجودة وتقليل
+            أحجام البيانات.
           </p>
-        </div>
-      </section>
-
-      <!-- الفيديو التعليمي الرئيسي -->
-      <section class="video-section">
-        <div class="container">
-          <h2 class="section-title">الفيديو التعليمي</h2>
-          <div class="video-container">
-            <video
-              controls
-              poster="../images/compression-poster.avif"
-              class="main-video"
-            >
-              <source
-                src="../videos/compression-techniques.mp4"
-                type="video/mp4"
-              />
-              <track
-                src="../videos/subtitles/compression.vtt"
-                kind="subtitles"
-                srclang="ar"
-                label="العربية"
-              />
-            </video>
-            <div class="video-info">
-              <h3>تقنيات الضغط الشاملة</h3>
-              <p>فيديو مفصل يغطي جميع تقنيات الضغط للصور والصوت والفيديو</p>
-              <div class="video-meta">
-                <span>⏱️ 25 دقيقة</span>
-                <span>📺 1080p</span>
-              </div>
-            </div>
+          <div class="hero-buttons">
+            <a href="topics.html" class="btn btn-primary">ابدأ التعلم</a>
+            <a href="videos.html" class="btn btn-secondary">شاهد الفيديوهات</a>
           </div>
         </div>
-      </section>
+        <div class="hero-media">
+          <picture>
+            <img
+              src="../assets/photos/compression-techniques.jpeg"
+              alt="رسم توضيحي لتقنيات الضغط"
+              class="hero-image"
+              loading="lazy"
+            />
+          </picture>
+        </div>
+      </div>
+    </section>
 
-      <!-- أنواع الضغط -->
-      <section class="compression-types">
-        <div class="container">
-          <h2 class="section-title">أنواع الضغط</h2>
-          <div class="types-grid">
-            <div class="type-card lossless">
-              <h3>🔄 الضغط غير المضيع</h3>
-              <div class="audio-player">
-                <audio controls>
+    <!-- Main Video Section -->
+    <section class="video-hero-section">
+      <div class="container">
+        <div class="video-hero-content">
+          <div class="video-header">
+            <h2 class="vedio-section-title">الفيديو التعليمي الرئيسي</h2>
+            <p class="section-subtitle">
+              مقدمة شاملة لتقنيات الضغط في الوسائط المتعددة
+            </p>
+          </div>
+
+          <div class="video-player-container">
+            <!-- Video Player on Top -->
+            <div class="video-top-section">
+              <div class="video-wrapper">
+                <video
+                  controls
+                  poster="../assets/photos/compression-video-poster.avif"
+                  class="main-video"
+                  id="mainVideo"
+                >
                   <source
-                    src="../audio/lossless-compression.mp3"
-                    type="audio/mpeg"
+                    src="../videos/compression-techniques.mp4"
+                    type="video/mp4"
                   />
-                </audio>
-                <span>الضغط غير المضيع (4 دقائق)</span>
-              </div>
-              <ul>
-                <li>نظرية المعلومات</li>
-                <li>ترميز هوفمان</li>
-                <li>ترميز طول التشغيل (RLE)</li>
-                <li>تطبيقات: ZIP, PNG, FLAC</li>
-              </ul>
-            </div>
-
-            <div class="type-card lossy">
-              <h3>📉 الضغط المضيع</h3>
-              <div class="audio-player">
-                <audio controls>
                   <source
-                    src="../audio/lossy-compression.mp3"
-                    type="audio/mpeg"
+                    src="../videos/compression-techniques.webm"
+                    type="video/webm"
                   />
-                </audio>
-                <span>الضغط المضيع (5 دقائق)</span>
+                  <track
+                    src="../videos/subtitles/compression-techniques.vtt"
+                    kind="subtitles"
+                    srclang="ar"
+                    label="العربية"
+                    default
+                  />
+                  <p>
+                    متصفحك لا يدعم تشغيل الفيديو. يرجى تحديث المتصفح أو
+                    <a href="../videos/compression-techniques.mp4"
+                      >تحميل الفيديو</a
+                    >.
+                  </p>
+                </video>
+
+                <!-- Custom Controls Overlay -->
+                <div class="custom-controls-overlay">
+                  <button class="play-pause-btn" id="playPauseBtn">
+                    <span class="play-icon">▶</span>
+                    <span class="pause-icon">⏸</span>
+                  </button>
+                  <div class="video-loading" id="videoLoading">
+                    <div class="loading-spinner"></div>
+                    <span>جاري التحميل...</span>
+                  </div>
+                </div>
               </div>
-              <ul>
-                <li>النموذج السمعي/البصري</li>
-                <li>تحويل DCT وجيب التمام</li>
-                <li>التكمية والتقريب</li>
-                <li>تطبيقات: JPEG, MP3, MPEG</li>
-              </ul>
+            </div>
+
+            <!-- Bottom Panels Section -->
+            <div class="video-bottom-panels">
+              <!-- Info Panel -->
+              <div class="panel info-panel">
+                <div class="panel-header">
+                  <h3 class="panel-title">معلومات الفيديو</h3>
+                </div>
+                <div class="panel-content">
+                  <div class="video-meta-header">
+                    <h4 class="video-title">
+                      مقدمة في تقنيات ضغط الوسائط المتعددة
+                    </h4>
+                    <div class="video-badges">
+                      <span class="badge primary">تعليمي</span>
+                      <span class="badge secondary">تقنيات الضغط</span>
+                    </div>
+                  </div>
+
+                  <p class="video-description">
+                    فيديو تعريفي شامل يشرح أساسيات تقنيات الضغط، أنواعها،
+                    خوارزمياتها، وتطبيقاتها العملية في الصور والفيديو والصوت.
+                    يشمل أمثلة عملية ومقارنات بين تقنيات الضغط المختلفة.
+                  </p>
+
+                  <div class="video-metadata">
+                    <div class="meta-item">
+                      <span class="meta-icon">⏱️</span>
+                      <div class="meta-content">
+                        <span class="meta-label">المدة</span>
+                        <span class="meta-value">25 دقيقة</span>
+                      </div>
+                    </div>
+
+                    <div class="meta-item">
+                      <span class="meta-icon">📺</span>
+                      <div class="meta-content">
+                        <span class="meta-label">الجودة</span>
+                        <span class="meta-value">1080p FHD</span>
+                      </div>
+                    </div>
+
+                    <div class="meta-item">
+                      <span class="meta-icon">🎵</span>
+                      <div class="meta-content">
+                        <span class="meta-label">الصوت</span>
+                        <span class="meta-value">عربي - ستريو</span>
+                      </div>
+                    </div>
+
+                    <div class="meta-item">
+                      <span class="meta-icon">📊</span>
+                      <div class="meta-content">
+                        <span class="meta-label">الحجم</span>
+                        <span class="meta-value">180 ميجابايت</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="video-actions">
+                    <button class="action-btn download-btn">
+                      <span>📥</span>
+                      تحميل الفيديو
+                    </button>
+                    <button class="action-btn transcript-btn">
+                      <span>📄</span>
+                      النص المكتوب
+                    </button>
+                    <button class="action-btn share-btn">
+                      <span>↗️</span>
+                      مشاركة
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Chapters Panel -->
+              <div class="panel chapters-panel">
+                <div class="panel-header">
+                  <h3 class="panel-title">فصول الفيديو</h3>
+                </div>
+                <div class="panel-content">
+                  <div class="chapters-list">
+                    <button class="chapter-item" data-time="0">
+                      <span class="chapter-time">00:00</span>
+                      <span class="chapter-title">المقدمة وأهمية الضغط</span>
+                    </button>
+                    <button class="chapter-item" data-time="120">
+                      <span class="chapter-time">02:00</span>
+                      <span class="chapter-title">الضغط غير المضيع</span>
+                    </button>
+                    <button class="chapter-item" data-time="480">
+                      <span class="chapter-time">08:00</span>
+                      <span class="chapter-title">الضغط المضيع</span>
+                    </button>
+                    <button class="chapter-item" data-time="900">
+                      <span class="chapter-time">15:00</span>
+                      <span class="chapter-title">معايير الضغط</span>
+                    </button>
+                    <button class="chapter-item" data-time="1200">
+                      <span class="chapter-time">20:00</span>
+                      <span class="chapter-title">أدوات المقارنة</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Progress Panel -->
+              <div class="panel progress-panel">
+                <div class="panel-header">
+                  <h3 class="panel-title">التقدم في المشاهدة</h3>
+                  <span class="progress-percent" id="progressPercent">0%</span>
+                </div>
+                <div class="panel-content">
+                  <div class="progress-bar-container">
+                    <div class="progress-bar" id="progressBar">
+                      <div class="progress-fill" id="progressFill"></div>
+                      <div class="progress-thumb" id="progressThumb"></div>
+                    </div>
+                  </div>
+                  <div class="bookmarks-container">
+                    <button class="bookmark-btn" id="addBookmarkBtn">
+                      <span>🔖</span>
+                      إضافة علامة
+                    </button>
+                    <div class="bookmarks-list" id="bookmarksList"></div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- معايير الضغط -->
-      <section class="compression-standards">
-        <div class="container">
-          <h2 class="section-title">معايير الضغط</h2>
-          <div class="standards-tabs">
-            <div class="tab-buttons">
-              <button class="tab-btn active" data-tab="images">🖼️ الصور</button>
-              <button class="tab-btn" data-tab="audio">🔊 الصوت</button>
-              <button class="tab-btn" data-tab="video">🎥 الفيديو</button>
-            </div>
+    <!-- Content Section Structure -->
+    <section class="content-section">
+      <div class="container">
+        <!-- الفكرة 1: مقدمة في تقنيات الضغط -->
+        <div class="concept-block">
+          <h2 class="concept-title">🌐 مقدمة في تقنيات الضغط</h2>
 
-            <div class="tab-content">
-              <!-- محتوى ضغط الصور -->
-              <div class="tab-pane active" id="images">
-                <h4>معايير ضغط الصور</h4>
-                <div class="standard-card">
-                  <h5>JPEG</h5>
-                  <ul>
-                    <li>تحويل DCT (جيب التمام المنفصل)</li>
-                    <li>التكمية والترميز</li>
-                    <li>أنماط: تسلسلي، تقدمي، هيكلي</li>
-                  </ul>
-                </div>
-                <div class="standard-card">
-                  <h5>PNG</h5>
-                  <ul>
-                    <li>ضغط غير مضيع</li>
-                    <li>دعم الشفافية</li>
-                    <li>مناسب للرسوم والصور البسيطة</li>
-                  </ul>
-                </div>
+          <div class="content-grid">
+            <!-- النقطة 1 -->
+            <div class="content-item">
+              <div class="text-content">
+                <h3>تعريف تقنيات الضغط وأهميتها</h3>
+                <p class="paragraph">
+                  تقنيات الضغط هي عمليات منهجية تعتمد على أسس رياضية متقدمة
+                  وخوارزميات حاسوبية معقدة، تهدف إلى إعادة ترميز البيانات
+                  الرقمية لتقليل حجمها مع الحفاظ على جوهرها المعلوماتي. تعمل هذه
+                  التقنيات من خلال تحليل الأنماط والتكرارات في البيانات،
+                  واستغلال خصائص الإدراك البشري، وتطبيق نماذج تنبؤية ذكية لإزالة
+                  التكرار غير الضروري والمعلومات الثانوية.
+                </p>
+                <p class="paragraph">
+                  في العصر الرقمي الحالي، حيث تُنتَج كميات هائلة من البيانات
+                  البصرية والسمعية كل ثانية، تبرز تقنيات الضغط كعامل حاسم يُسهّل
+                  التعامل مع هذا الفيض المعلوماتي. تُعد هذه التقنيات بمثابة
+                  العمود الفقري للبنية التحتية الرقمية العالمية، حيث تمكّننا من
+                  تخزين ونقل ومعالجة المحتوى المرئي والمسموع بكفاءة غير مسبوقة.
+                </p>
               </div>
-
-              <!-- محتوى ضغط الصوت -->
-              <div class="tab-pane" id="audio">
-                <h4>معايير ضغط الصوت</h4>
-                <div class="standard-card">
-                  <h5>MP3</h5>
-                  <ul>
-                    <li>النموذج السمعي البشري</li>
-                    <li>إزالة الترددات غير المسموعة</li>
-                    <li>ضغط عالي الكفاءة</li>
-                  </ul>
-                </div>
-                <div class="standard-card">
-                  <h5>AAC</h5>
-                  <ul>
-                    <li>تطور عن MP3</li>
-                    <li>كفاءة أفضل في الضغط</li>
-                    <li>استخدام واسع في البث</li>
-                  </ul>
-                </div>
-              </div>
-
-              <!-- محتوى ضغط الفيديو -->
-              <div class="tab-pane" id="video">
-                <h4>معايير ضغط الفيديو</h4>
-                <div class="standard-card">
-                  <h5>H.264/AVC</h5>
-                  <ul>
-                    <li>تعويض الحركة المتقدم</li>
-                    <li>كفاءة ضغط عالية</li>
-                    <li>استخدام واسع في البث والتخزين</li>
-                  </ul>
-                </div>
-                <div class="standard-card">
-                  <h5>H.265/HEVC</h5>
-                  <ul>
-                    <li>تحسين عن H.264</li>
-                    <li>كفاءة ضغط مضاعفة</li>
-                    <li>مناسب للدقات العالية (4K, 8K)</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- أداة مقارنة الضغط -->
-      <section class="compression-tool">
-        <div class="container">
-          <h2 class="section-title">أداة مقارنة الضغط</h2>
-          <div class="tool-container">
-            <div class="comparison-area">
-              <div class="original">
-                <h4>الصورة الأصلية</h4>
+              <div class="media-content">
                 <img
-                  src="../images/original-image.avif"
-                  alt="صورة أصلية"
-                  id="original-img"
+                  src="../images/compression-intro.avif"
+                  alt="مقدمة في تقنيات الضغط"
+                  class="concept-image"
                 />
-                <div class="file-size">الحجم: 2.5 MB</div>
-              </div>
-              <div class="compressed">
-                <h4>بعد الضغط</h4>
-                <img
-                  src="../images/compressed-image.avif"
-                  alt="صورة مضغوطة"
-                  id="compressed-img"
-                />
-                <div class="file-size">الحجم: 450 KB</div>
+                <div class="audio-player">
+                  <audio controls>
+                    <source
+                      src="../audio/compression-intro.mp3"
+                      type="audio/mpeg"
+                    />
+                  </audio>
+                  <span>مقدمة في تقنيات الضغط (4 دقائق)</span>
+                </div>
               </div>
             </div>
-            <div class="compression-controls">
-              <label
-                >جودة الضغط:
-                <input
-                  type="range"
-                  id="quality-slider"
-                  min="0"
-                  max="100"
-                  value="75"
+
+            <!-- النقطة 2 -->
+            <div class="content-item reverse">
+              <div class="media-content">
+                <img
+                  src="../images/compression-characteristics.avif"
+                  alt="خصائص تقنيات الضغط"
+                  class="concept-image"
                 />
-                <span id="quality-value">75%</span>
-              </label>
-              <div id="compression-ratio">نسبة الضغط: 82%</div>
+                <div class="audio-player">
+                  <audio controls>
+                    <source
+                      src="../audio/compression-chars.mp3"
+                      type="audio/mpeg"
+                    />
+                  </audio>
+                  <span>خصائص تقنيات الضغط (5 دقائق)</span>
+                </div>
+              </div>
+              <div class="text-content">
+                <h3>خصائص تقنيات الضغط</h3>
+                <p class="paragraph">تتميز تقنيات الضغط بعدة خصائص رئيسية:</p>
+                <ul class="feature-list">
+                  <li>
+                    <strong>الكفاءة (Efficiency):</strong> القدرة على تحقيق نسب
+                    ضغط عالية مع تحقيق التوازن الأمثل بين الحجم والجودة
+                  </li>
+                  <li>
+                    <strong>المرونة (Flexibility):</strong> دعم أنواع متعددة من
+                    الوسائط (نص، صورة، صوت، فيديو) والعمل في بيئات تشغيل متنوعة
+                  </li>
+                  <li>
+                    <strong>القابلية للتطوير (Scalability):</strong> التعامل مع
+                    أحجام بيانات متزايدة ودعم دقات مختلفة وجودة متعددة المستويات
+                  </li>
+                  <li>
+                    <strong>الأمان (Security):</strong> إمكانية دمج طبقات حماية
+                    للبيانات ومقاومة الأخطاء وفقدان البيانات
+                  </li>
+                  <li>
+                    <strong>التوافقية (Compatibility):</strong> العمل مع أنظمة
+                    وتقنيات متنوعة ودعم المعايير القياسية العالمية
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
-      </section>
-    </main>
+
+        <!-- الفكرة 2: الضغط غير المضيع -->
+        <div class="concept-block">
+          <h2 class="concept-title">
+            🔒 الضغط غير المضيع (بدون فقدان البيانات)
+          </h2>
+
+          <div class="content-grid">
+            <!-- النقطة 1 -->
+            <div class="content-item">
+              <div class="text-content">
+                <h3>تعريف الضغط غير المضيع</h3>
+                <p class="paragraph">
+                  الضغط غير المضيع هو تقنية أو عملية معالجة بيانات تهدف إلى 
+                  تقليل حجم الملفات الرقمية  مع  الحفاظ الكامل على جميع
+                  المعلومات الأصلية  دون أي فقدان، حيث يمكن إعادة بناء البيانات
+                  المضغوطة إلى حالتها الأصلية بشكل مطابق كليةً عند فك الضغط.
+                </p>
+                <p class="paragraph">من أهم خصائص الضغط غير المضيع:</p>
+                <ul class="feature-list">
+                  <li>
+                    <strong>الحفاظ الكامل على البيانات:</strong> لا يتم فقدان أي
+                    معلومات أثناء عملية الضغط
+                  </li>
+                  <li>
+                    <strong>إمكانية الاستعادة الكاملة:</strong> يمكن استعادة
+                    البيانات المضغوطة إلى حالتها الأصلية تماماً
+                  </li>
+                  <li>
+                    <strong>مناسب للبيانات الحساسة:</strong> مثالي للملفات
+                    النصية، البرامج، والبيانات العلمية
+                  </li>
+                  <li>
+                    <strong>نسب ضغط محدودة:</strong> عادة ما تكون نسب الضغط أقل
+                    مقارنة بالضغط المضيع
+                  </li>
+                </ul>
+              </div>
+              <div class="media-content">
+                <img src="../images/lossless-compression.avif" altالضغط غير
+                المضيع" class="concept-image" />
+                <div class="audio-player">
+                  <audio controls>
+                    <source
+                      src="../audio/lossless-compression.mp3"
+                      type="audio/mpeg"
+                    />
+                  </audio>
+                  <span>الضغط غير المضيع (4 دقائق)</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- النقطة 2 -->
+            <div class="content-item reverse">
+              <div class="media-content">
+                <img
+                  src="../images/huffman-coding.avif"
+                  alt="ترميز هوفمان"
+                  class="concept-image"
+                />
+                <div class="audio-player">
+                  <audio controls>
+                    <source
+                      src="../audio/huffman-coding.mp3"
+                      type="audio/mpeg"
+                    />
+                  </audio>
+                  <span>ترميز هوفمان (5 دقائق)</span>
+                </div>
+              </div>
+              <div class="text-content">
+                <h3>تقنيات الضغط غير المضيع</h3>
+                <p class="paragraph">أهم تقنيات الضغط غير المضيع:</p>
+                <div class="type-comparison">
+                  <div class="type-item">
+                    <h4>ترميز هوفمان (Huffman Coding)</h4>
+                    <ul>
+                      <li>تعيين رموز ثنائية متغيرة الطول للرموز</li>
+                      <li>الرموز الأكثر تكراراً تحصل على رموز أقصر</li>
+                      <li>الرموز الأقل تكراراً تحصل على رموز أطول</li>
+                      <li><strong>التطبيقات:</strong> ZIP, PNG, الأرشيف</li>
+                    </ul>
+                  </div>
+                  <div class="type-item">
+                    <h4>ترميز طول التشغيل (RLE)</h4>
+                    <ul>
+                      <li>يستبدل التتابعات المتكررة من القيمة نفسها</li>
+                      <li>يستخدم زوجاً من (القيمة، عدد التكرار)</li>
+                      <li>فعال مع البيانات ذات التكرارات الطويلة</li>
+                      <li>
+                        <strong>التطبيقات:</strong> TIFF, BMP, البيانات العلمية
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- النقطة 3 -->
+            <div class="content-item">
+              <div class="text-content">
+                <h3>نظرية المعلومات وأساسيات الضغط</h3>
+                <p class="paragraph">
+                  نظرية المعلومات هي الأساس النظري الذي تقوم عليه تقنيات الضغط،
+                  طورها كلود شانون عام 1948، وتركز على قياس كمية المعلومات
+                  ونقلها.
+                </p>
+                <div class="color-models">
+                  <div class="model-item">
+                    <h4>الإنتروبيا (Entropy)</h4>
+                    <p>
+                      مقياس لعدم اليقين أو كمية المعلومات في البيانات. كلما زادت
+                      الإنتروبيا، زادت صعوبة ضغط البيانات.
+                    </p>
+                  </div>
+                  <div class="model-item">
+                    <h4>البت (Bit)</h4>
+                    <p>
+                      وحدة قياس المعلومات الأساسية في الأنظمة الرقمية. يمثل أصغر
+                      وحدة معلومات يمكن تخزينها أو نقلها.
+                    </p>
+                  </div>
+                  <div class="model-item">
+                    <h4>معدل البت (Bit Rate)</h4>
+                    <p>
+                      عدد البتات اللازمة لتمثيل المعلومات في وحدة الزمن. يُستخدم
+                      لقياس كفاءة خوارزميات الضغط.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="media-content">
+                <img
+                  src="../images/information-theory.avif"
+                  alt="نظرية المعلومات"
+                  class="concept-image"
+                />
+                <div class="audio-player">
+                  <audio controls>
+                    <source
+                      src="../audio/information-theory.mp3"
+                      type="audio/mpeg"
+                    />
+                  </audio>
+                  <span>نظرية المعلومات (4 دقائق)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- الفكرة 3: الضغط المضيع -->
+        <div class="concept-block">
+          <h2 class="concept-title">📉 الضغط المضيع (مع فقدان البيانات)</h2>
+
+          <div class="content-grid">
+            <!-- النقطة 1 -->
+            <div class="content-item">
+              <div class="text-content">
+                <h3>تعريف الضغط المضيع</h3>
+                <p class="paragraph">
+                  الضغط المضيع هو تقنية معالجة بيانات تهدف إلى تقليل حجم الملفات
+                  بشكل كبير من خلال التخلص الانتقائي من أجزاء من المعلومات التي
+                  تعتبر أقل أهمية للإدراك البشري أو للغرض المستخدم، مع الاحتفاظ
+                  بالجوهر الأساسي للمحتوى.
+                </p>
+                <p class="paragraph">من أهم خصائص الضغط المضيع:</p>
+                <ul class="feature-list">
+                  <li>
+                    <strong>نسب ضغط عالية:</strong> يمكن تحقيق تخفيض كبير في حجم
+                    الملفات
+                  </li>
+                  <li>
+                    <strong>فقدان بيانات غير قابل للاستعادة:</strong> البيانات
+                    المفقودة لا يمكن استرجاعها
+                  </li>
+                  <li>
+                    <strong>استغلال خصائص الإدراك البشري:</strong> إزالة
+                    المعلومات غير الملحوظة للإنسان
+                  </li>
+                  <li>
+                    <strong>مناسب للوسائط المتعددة:</strong> مثالي للصور،
+                    الفيديو، والصوت
+                  </li>
+                </ul>
+              </div>
+              <div class="media-content">
+                <img
+                  src="../images/lossy-compression.avif"
+                  alt="الضغط المضيع"
+                  class="concept-image"
+                />
+                <div class="audio-player">
+                  <audio controls>
+                    <source
+                      src="../audio/lossy-compression.mp3"
+                      type="audio/mpeg"
+                    />
+                  </audio>
+                  <span>الضغط المضيع (4 دقائق)</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- النقطة 2 -->
+            <div class="content-item reverse">
+              <div class="media-content">
+                <img
+                  src="../images/psychoacoustic-model.avif"
+                  alt="النموذج السمعي/البصري"
+                  class="concept-image"
+                />
+                <div class="audio-player">
+                  <audio controls>
+                    <source
+                      src="../audio/psychoacoustic-model.mp3"
+                      type="audio/mpeg"
+                    />
+                  </audio>
+                  <span>النموذج السمعي/البصري (5 دقائق)</span>
+                </div>
+              </div>
+              <div class="text-content">
+                <h3>النموذج السمعي/البصري</h3>
+                <p class="paragraph">
+                  النموذج السمعي/البصري هو نموذج رياضي يحاكي خصائص الإدراك الحسي
+                  البشري للصوت والصورة، ويحدد مدى حساسية الأذن والعين للتغيرات
+                  في البيانات.
+                </p>
+                <div class="signal-comparison">
+                  <div class="signal-type">
+                    <h4>التغطية (Masking)</h4>
+                    <ul>
+                      <li>قدرة إشارة قوية على إخفاء إشارة ضعيفة مجاورة لها</li>
+                      <li>يمكن أن تكون في التردد أو الزمن</li>
+                      <li>يُستغل في إزالة الأصوات أو الصور المخفية</li>
+                      <li><strong>التطبيقات:</strong> MP3, JPEG</li>
+                    </ul>
+                  </div>
+                  <div class="signal-type">
+                    <h4>عتبة السمع (Auditory Threshold)</h4>
+                    <ul>
+                      <li>أقل مستوى صوتي يمكن للأذن البشرية سماعه</li>
+                      <li>يختلف حسب التردد والعمر</li>
+                      <li>يُستخدم لتحديد الأصوات التي يمكن إزالتها</li>
+                      <li><strong>التطبيقات:</strong> MP3, AAC</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- النقطة 3 -->
+            <div class="content-item">
+              <div class="text-content">
+                <h3>تقنيات الضغط المضيع الأساسية</h3>
+                <p class="paragraph">
+                  تعتمد تقنيات الضغط المضيع على عدة تقنيات أساسية تعمل معاً في
+                  نظام متكامل:
+                </p>
+                <div class="video-quality">
+                  <div class="quality-factor">
+                    <h4>تحويل DCT وجيب التمام</h4>
+                    <p>
+                      تحويل رياضي يحول الإشارة من المجال الزمني أو المكاني إلى
+                      مجال التردد، حيث يتم تمثيل البيانات كمجموعة من دوال جيب
+                      التمام بترددات مختلفة.
+                    </p>
+                    <ul>
+                      <li>
+                        تحويل الكتل الصغيرة من البكسلات إلى معاملات ترددية
+                      </li>
+                      <li>تجميع الطاقة في معاملات قليلة (الترددات المنخفضة)</li>
+                      <li>
+                        إهمال المعاملات ذات القيم الصغيرة (الترددات العالية)
+                      </li>
+                      <li><strong>التطبيقات:</strong> JPEG, MPEG, MP3</li>
+                    </ul>
+                  </div>
+                  <div class="quality-factor">
+                    <h4>التكمية والتقريب</h4>
+                    <p>
+                      عملية تقليل عدد البتات المستخدمة لتمثيل البيانات عن طريق
+                      تقريب القيم إلى مستويات محددة مسبقاً، وهي المرحلة التي
+                      يحدث فيها معظم الفقدان في البيانات.
+                    </p>
+                    <ul>
+                      <li>
+                        تعيين القيم المستمرة إلى مجموعة محددة من القيم المنفصلة
+                      </li>
+                      <li>اختيار أقرب قيمة من مجموعة القيم المسموح بها</li>
+                      <li>تكمية أقوى للمعاملات عالية التردد</li>
+                      <li><strong>التطبيقات:</strong> JPEG, MP3</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="media-content">
+                <img
+                  src="../images/dct-quantization.avif"
+                  alt="تحويل DCT والتكمية"
+                  class="concept-image"
+                />
+                <div class="audio-player">
+                  <audio controls>
+                    <source
+                      src="../audio/dct-quantization.mp3"
+                      type="audio/mpeg"
+                    />
+                  </audio>
+                  <span>تحويل DCT والتكمية (4 دقائق)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- الفكرة 4: معايير ضغط الصور -->
+        <div class="concept-block">
+          <h2 class="concept-title">🖼️ معايير ضغط الصور</h2>
+
+          <div class="content-grid">
+            <!-- النقطة 1 -->
+            <div class="content-item">
+              <div class="text-content">
+                <h3>معيار JPEG</h3>
+                <p class="paragraph">
+                  JPEG (Joint Photographic Experts Group) هو معيار ضغط مضيع
+                  للصور الفوتوغرافية والطبيعية، ويُعتبر الأكثر انتشاراً
+                  واستخداماً في العالم.
+                </p>
+                <p class="paragraph">عملية ضغط JPEG:</p>
+                <ol class="formation-steps">
+                  <li>
+                    <strong>تقسيم الصورة إلى كتل:</strong> تقسيم الصورة إلى كتل
+                    8×8 بكسلات
+                  </li>
+                  <li>
+                    <strong>تحويل DCT:</strong> تحويل كل كتلة باستخدام معادلة
+                    DCT إلى مجال التردد
+                  </li>
+                  <li>
+                    <strong>التكمية:</strong> استخدام جدول كمي قياسي لتقليل دقة
+                    المعاملات الترددية
+                  </li>
+                  <li>
+                    <strong>الترميز:</strong> ترميز المعامل DC باستخدام الفروقات
+                    بين الكتل، وترميز المعاملات AC باستخدام RLE
+                  </li>
+                  <li>
+                    <strong>الضغط النهائي:</strong> تطبيق ترميز هوفمان للحصول
+                    على الملف المضغوط النهائي
+                  </li>
+                </ol>
+              </div>
+              <div class="media-content">
+                <img
+                  src="../images/jpeg-compression.avif"
+                  alt="معيار ضغط JPEG"
+                  class="concept-image"
+                />
+                <div class="audio-player">
+                  <audio controls>
+                    <source
+                      src="../audio/jpeg-compression.mp3"
+                      type="audio/mpeg"
+                    />
+                  </audio>
+                  <span>معيار JPEG (5 دقائق)</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- النقطة 2 -->
+            <div class="content-item reverse">
+              <div class="media-content">
+                <img
+                  src="../images/png-compression.avif"
+                  alt="معيار ضغط PNG"
+                  class="concept-image"
+                />
+                <div class="audio-player">
+                  <audio controls>
+                    <source
+                      src="../audio/png-compression.mp3"
+                      type="audio/mpeg"
+                    />
+                  </audio>
+                  <span>معيار PNG (4 دقائق)</span>
+                </div>
+              </div>
+              <div class="text-content">
+                <h3>معيار PNG</h3>
+                <p class="paragraph">
+                  PNG (Portable Network Graphics) هو معيار ضغط غير مضيع يستخدم
+                  للرسومات، الشعارات، والصور ذات الألوان المسطحة.
+                </p>
+                <div class="type-comparison">
+                  <div class="type-item">
+                    <h4>خوارزمية الضغط (DEFLATE)</h4>
+                    <ul>
+                      <li>يجمع بين خوارزميتين: LZ77 و Huffman Coding</li>
+                      <li>
+                        المرحلة الأولى LZ77: يبحث عن التكرارات في البيانات
+                      </li>
+                      <li>المرحلة الثانية Huffman: يضغط الإشارات الناتجة</li>
+                      <li>يحقق نسب ضغط تتراوح بين 2:1 إلى 5:1</li>
+                    </ul>
+                  </div>
+                  <div class="type-item">
+                    <h4>مرشحات الخطوط (Filtering)</h4>
+                    <ul>
+                      <li>تحسين قابلية الضغط عن طريق إعداد البيانات</li>
+                      <li>ترميز الفرق بين البيكسل والبيكسل السابق</li>
+                      <li>ترميز الفرق بين البيكسل والبيكسل في الخط السابق</li>
+                      <li>يحسن من كفاءة الضغط النهائية</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- النقطة 3 -->
+            <div class="content-item">
+              <div class="text-content">
+                <h3>أنواع PNG والمميزات</h3>
+                <p class="paragraph">
+                  يتوفر معيار PNG بعدة أنواع تختلف في دعم الألوان والشفافية:
+                </p>
+                <div class="color-models">
+                  <div class="model-item">
+                    <h4>PNG-8</h4>
+                    <p>
+                      يدعم حتى 256 لون كحد أقصى، حجم ملف صغير، مناسب للرسومات
+                      البسيطة والشعارات.
+                    </p>
+                  </div>
+                  <div class="model-item">
+                    <h4>PNG-24</h4>
+                    <p>
+                      ألوان حقيقية 16.7 مليون لون، جودة عالية مع حجم ملف أكبر،
+                      مناسب للصور ذات التفاصيل الدقيقة.
+                    </p>
+                  </div>
+                  <div class="model-item">
+                    <h4>PNG-32</h4>
+                    <p>
+                      ألوان حقيقية مع قناة ألفا، أعلى جودة وأكبر حجماً، يدعم
+                      الشفافية المتقدمة والتدرجات الشفافة.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="media-content">
+                <img
+                  src="../images/png-types.avif"
+                  alt="أنواع PNG"
+                  class="concept-image"
+                />
+                <div class="audio-player">
+                  <audio controls>
+                    <source src="../audio/png-types.mp3" type="audio/mpeg" />
+                  </audio>
+                  <span>أنواع PNG (4 دقائق)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- الفكرة 5: معايير ضغط الفيديو -->
+        <div class="concept-block">
+          <h2 class="concept-title">🎥 معايير ضغط الفيديو</h2>
+
+          <div class="content-grid">
+            <!-- النقطة 1 -->
+            <div class="content-item">
+              <div class="text-content">
+                <h3>معيار H.264/AVC</h3>
+                <p class="paragraph">
+                  H.264/AVC (Advanced Video Coding) هو معيار ضغط فيديو واسع
+                  الانتشار، ويُعتبر الأكثر استخداماً عالمياً مع تحسن في الكفاءة
+                  بنسبة 50% عن المعايير السابقة.
+                </p>
+                <p class="paragraph">التقنيات الرئيسية في H.264:</p>
+                <ul class="feature-list">
+                  <li>
+                    <strong>كتل متغيرة الحجم:</strong> المدى من 4×4 إلى 16×16
+                    بكسل حسب تعقيد المشهد
+                  </li>
+                  <li>
+                    <strong>إطارات مرجعية متعددة:</strong> حتى 16 إطاراً مرجعياً
+                    للتنبؤ من إطارات سابقة متعددة
+                  </li>
+                  <li>
+                    <strong>دقة ربع البكسل:</strong> تقدير حركة بدقة 1/4 بكسل
+                    لحركة أكثر سلاسة ودقة
+                  </li>
+                  <li>
+                    <strong>إطارات B ثنائية الاتجاه:</strong> التنبؤ من الإطارات
+                    السابقة واللاحقة لتوفير 15-20% في معدل البت
+                  </li>
+                </ul>
+              </div>
+              <div class="media-content">
+                <img
+                  src="../images/h264-compression.avif"
+                  alt="معيار H.264/AVC"
+                  class="concept-image"
+                />
+                <div class="audio-player">
+                  <audio controls>
+                    <source
+                      src="../audio/h264-compression.mp3"
+                      type="audio/mpeg"
+                    />
+                  </audio>
+                  <span>معيار H.264 (5 دقائق)</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- النقطة 2 -->
+            <div class="content-item reverse">
+              <div class="media-content">
+                <img
+                  src="../images/h265-compression.avif"
+                  alt="معيار H.265/HEVC"
+                  class="concept-image"
+                />
+                <div class="audio-player">
+                  <audio controls>
+                    <source
+                      src="../audio/h265-compression.mp3"
+                      type="audio/mpeg"
+                    />
+                  </audio>
+                  <span>معيار H.265 (5 دقائق)</span>
+                </div>
+              </div>
+              <div class="text-content">
+                <h3>معيار H.265/HEVC</h3>
+                <p class="paragraph">
+                  H.265/HEVC (High Efficiency Video Coding) هو معيار ضغط فيديو
+                  متقدم يقدم ضعف كفاءة H.264 تقريباً، ويدعم الفيديو عالي الدقة
+                  (4K/8K).
+                </p>
+                <div class="signal-comparison">
+                  <div class="signal-type">
+                    <h4>التحسينات عن H.264</h4>
+                    <ul>
+                      <li>
+                        <strong>وحدات الترميز المتقدمة:</strong> وحدات شجرة مرنة
+                        حتى 64×64 بكسل
+                      </li>
+                      <li>
+                        <strong>تحسين تعويض الحركة:</strong> دقة حركة 1/8 بكسل
+                        بدلاً من 1/4 بكسل
+                      </li>
+                      <li>
+                        <strong>تحسينات في التنبؤ داخل الإطار:</strong> 35
+                        اتجاهاً للتنبؤ بدلاً من 9
+                      </li>
+                      <li>
+                        <strong>الإطارات المرجعية:</strong> حتى 32 إطاراً بدلاً
+                        من 16
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="signal-type">
+                    <h4>مناسب للدقات العالية</h4>
+                    <ul>
+                      <li>
+                        <strong>4K UHD:</strong> 8.3 مليون بكسل (4× 1080p)
+                      </li>
+                      <li>
+                        <strong>8K UHD:</strong> 33.2 مليون بكسل (16× 1080p)
+                      </li>
+                      <li>
+                        <strong>تقنية HDR:</strong> دعم لألوان أوسع ونطاق
+                        ديناميكي عالٍ
+                      </li>
+                      <li>
+                        <strong>عمق لون 10-bit:</strong> مليار لون بدلاً من 16.7
+                        مليون
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- الفكرة 6: معايير ضغط الصوت -->
+        <div class="concept-block">
+          <h2 class="concept-title">🎵 معايير ضغط الصوت</h2>
+
+          <div class="content-grid">
+            <!-- النقطة 1 -->
+            <div class="content-item">
+              <div class="text-content">
+                <h3>معيار MP3</h3>
+                <p class="paragraph">
+                  MP3 (MPEG-1 Audio Layer III) هو معيار ضغط صوت مضيع واسع
+                  الانتشار، يعتمد على استغلال محدوديات حاسة السمع البشرية لإزالة
+                  البيانات غير المسموعة.
+                </p>
+                <p class="paragraph">الظواهر السمعية المستغلة في MP3:</p>
+                <div class="video-quality">
+                  <div class="quality-factor">
+                    <h4>التغطية السمعية (Auditory Masking)</h4>
+                    <ul>
+                      <li>
+                        <strong>التغطية الترددية:</strong> الصوت القوي يخفي
+                        الأصوات الضعيفة المجاورة له في الطيف الترددي
+                      </li>
+                      <li>
+                        <strong>التغطية الزمنية:</strong> الصوت القوي يخفي
+                        الأصوات التي تسبقه أو تليه زمنياً
+                      </li>
+                      <li>
+                        <strong>التأثير العملي:</strong> إزالة المكونات الصوتية
+                        المخفية
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="quality-factor">
+                    <h4>عتبة السمع (Absolute Threshold)</h4>
+                    <ul>
+                      <li>
+                        <strong>الترددات غير المسموعة:</strong> تحت 20 Hz وفوق
+                        20 kHz
+                      </li>
+                      <li>
+                        <strong>الحساسية القصوى:</strong> بين 2-5 kHz أكثر نطاق
+                        ترددي تسمعه الأذن بوضوح
+                      </li>
+                      <li>
+                        <strong>التطبيق:</strong> التركيز على الحفاظ على
+                        النطاقات الأكثر حساسية
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="media-content">
+                <img
+                  src="../images/mp3-compression.avif"
+                  alt="معيار ضغط MP3"
+                  class="concept-image"
+                />
+                <div class="audio-player">
+                  <audio controls>
+                    <source
+                      src="../audio/mp3-compression.mp3"
+                      type="audio/mpeg"
+                    />
+                  </audio>
+                  <span>معيار MP3 (5 دقائق)</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- النقطة 2 -->
+            <div class="content-item reverse">
+              <div class="media-content">
+                <img
+                  src="../images/aac-compression.avif"
+                  alt="معيار ضغط AAC"
+                  class="concept-image"
+                />
+                <div class="audio-player">
+                  <audio controls>
+                    <source
+                      src="../audio/aac-compression.mp3"
+                      type="audio/mpeg"
+                    />
+                  </audio>
+                  <span>معيار AAC (5 دقائق)</span>
+                </div>
+              </div>
+              <div class="text-content">
+                <h3>معيار AAC</h3>
+                <p class="paragraph">
+                  AAC (Advanced Audio Coding) هو معيار ضغط صوت مضيع متقدم يحسن
+                  أداء MP3 ويقدم كفاءة أعلى، ويُستخدم على نطاق واسع في البث
+                  والمنصات الرقمية.
+                </p>
+                <div class="type-comparison">
+                  <div class="type-item">
+                    <h4>التحسينات عن MP3</h4>
+                    <ul>
+                      <li>
+                        <strong>مرونة أكبر في التحويلات:</strong> استخدام MDCT
+                        بنوافذ متغيرة
+                      </li>
+                      <li>
+                        <strong>دعم عينات أعلى:</strong> حتى 96 كيلوهرتز بدلاً
+                        من 48 كيلوهرتز
+                      </li>
+                      <li>
+                        <strong>نموذج سمعي أكثر دقة:</strong> محاكاة أفضل لعمل
+                        الأذن البشرية
+                      </li>
+                      <li>
+                        <strong>معالجة أفضل للقنوات المتعددة:</strong> كفاءة
+                        أعلى في ترميز الصوت متعدد القنوات
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="type-item">
+                    <h4>مجالات الانتشار</h4>
+                    <ul>
+                      <li>
+                        <strong>البث التلفزيوني والراديوي:</strong> معيار في
+                        معظم أنظمة البث العالمية
+                      </li>
+                      <li>
+                        <strong>المنصات الرقمية:</strong> يوتيوب، نتفليكس،
+                        آيتونز
+                      </li>
+                      <li>
+                        <strong>الأجهزة والأنظمة:</strong> الهواتف الذكية،
+                        مشغلات الوسائط
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- الفكرة 7: أدوات مقارنة الضغط -->
+        <div class="concept-block">
+          <h2 class="concept-title">📊 أدوات مقارنة الضغط</h2>
+
+          <div class="content-grid">
+            <!-- النقطة 1 -->
+            <div class="content-item">
+              <div class="text-content">
+                <h3>مفهوم أداة مقارنة الضغط</h3>
+                <p class="paragraph">
+                  أداة مقارنة الضغط هي برنامج أو تطبيق يُستخدم لمقارنة ملفات
+                  الوسائط (صور، فيديو، صوت) قبل وبعد عملية الضغط، بهدف تقييم
+                  كفاءة الضغط وتأثيره على الجودة.
+                </p>
+                <p class="paragraph">مكونات الأداة الرئيسية:</p>
+                <ul class="feature-list">
+                  <li>
+                    <strong>واجهة المقارنة البصرية:</strong> عرض الصورة الأصلية
+                    والمضغوطة جنباً إلى جنب مع إمكانية التكبير والتحريك
+                  </li>
+                  <li>
+                    <strong>القياسات الكمية:</strong> حجم الملف قبل وبعد الضغط،
+                    نسبة الضغط، عامل الضغط
+                  </li>
+                  <li>
+                    <strong>تحليل الجودة:</strong> مقاييس الجودة مثل PSNR، SSIM،
+                    MS-SSIM والخرائط البصرية للاختلافات
+                  </li>
+                </ul>
+              </div>
+              <div class="media-content">
+                <img
+                  src="../images/compression-tools.avif"
+                  alt="أدوات مقارنة الضغط"
+                  class="concept-image"
+                />
+                <div class="audio-player">
+                  <audio controls>
+                    <source
+                      src="../audio/compression-tools.mp3"
+                      type="audio/mpeg"
+                    />
+                  </audio>
+                  <span>أدوات مقارنة الضغط (4 دقائق)</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- النقطة 2 -->
+            <div class="content-item reverse">
+              <div class="media-content">
+                <img
+                  src="../images/compression-metrics.avif"
+                  alt="مقاييس جودة الضغط"
+                  class="concept-image"
+                />
+                <div class="audio-player">
+                  <audio controls>
+                    <source
+                      src="../audio/compression-metrics.mp3"
+                      type="audio/mpeg"
+                    />
+                  </audio>
+                  <span>مقاييس جودة الضغط (5 دقائق)</span>
+                </div>
+              </div>
+              <div class="text-content">
+                <h3>مقاييس الجودة الشائعة</h3>
+                <p class="paragraph">
+                  تُستخدم عدة مقاييس كمية لتقييم جودة الوسائط بعد الضغط:
+                </p>
+                <div class="signal-comparison">
+                  <div class="signal-type">
+                    <h4>PSNR (Peak Signal-to-Noise Ratio)</h4>
+                    <ul>
+                      <li><strong>المدى:</strong> 30-50 dB</li>
+                      <li><strong>جيد:</strong> فوق 40 dB</li>
+                      <li><strong>ضعيف:</strong> تحت 30 dB</li>
+                      <li>يقيس نسبة الإشارة إلى الضوضاء في الصورة المضغوطة</li>
+                    </ul>
+                  </div>
+                  <div class="signal-type">
+                    <h4>SSIM (Structural Similarity Index)</h4>
+                    <ul>
+                      <li><strong>المدى:</strong> 0-1</li>
+                      <li><strong>ممتاز:</strong> 0.95-1.00</li>
+                      <li><strong>جيد:</strong> 0.90-0.95</li>
+                      <li>يقيس التشابه الهيكلي بين الصورة الأصلية والمضغوطة</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- النقطة 3 -->
+            <div class="content-item">
+              <div class="text-content">
+                <h3>استخدامات وأدوات مقارنة الضغط</h3>
+                <p class="paragraph">
+                  تُستخدم أدوات مقارنة الضغط من قبل فئات مختلفة ولأغراض متعددة:
+                </p>
+                <div class="video-quality">
+                  <div class="quality-factor">
+                    <h4>فئات المستخدمين</h4>
+                    <ul>
+                      <li>
+                        <strong>المطورون:</strong> تحسين الخوارزميات، اختبار
+                        كفاءة الضغط، تحديد الإعدادات المثلى
+                      </li>
+                      <li>
+                        <strong>المستخدمون العاديون:</strong> اختيار إعدادات
+                        الضغط المناسبة، موازنة الجودة والحجم، توفير مساحة
+                        التخزين
+                      </li>
+                      <li>
+                        <strong>المحترفون:</strong> مقارنة معايير الضغط، تقييم
+                        جودة الوسائط، اتخاذ قرارات الأرشيف
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="quality-factor">
+                    <h4>الأدوات الشهيرة</h4>
+                    <ul>
+                      <li>
+                        <strong>للصور:</strong> ImageMagick, Adobe Photoshop,
+                        Online Image Compressors
+                      </li>
+                      <li>
+                        <strong>للفيديو:</strong> FFmpeg, HandBrake, Adobe Media
+                        Encoder
+                      </li>
+                      <li>
+                        <strong>للصوت:</strong> Audacity, SoX, Online Audio
+                        Tools
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="media-content">
+                <img
+                  src="../images/compression-applications.avif"
+                  alt="استخدامات أدوات مقارنة الضغط"
+                  class="concept-image"
+                />
+                <div class="audio-player">
+                  <audio controls>
+                    <source
+                      src="../audio/compression-applications.mp3"
+                      type="audio/mpeg"
+                    />
+                  </audio>
+                  <span>استخدامات أدوات المقارنة (4 دقائق)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <footer class="footer">
       <div class="container">
@@ -254,6 +1275,6 @@
     </footer>
 
     <script src="../scripts/main.js"></script>
-    <script src="../scripts/compression-demo.js"></script>
+    <script src="../scripts/video-player.js"></script>
   </body>
 </html>
