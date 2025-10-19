@@ -142,10 +142,6 @@
   }
 
   /* Paragraphs */
-  .content-item {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
 
   .content-item.reverse {
     direction: rtl;
