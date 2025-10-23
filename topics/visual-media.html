@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="../styles/style.css" />
     <link rel="stylesheet" href="../styles/responsive.css" />
     <link rel="stylesheet" href="../styles/animations.css" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/photos/logo.svg" />
   </head>
   <body>
     <!-- Header -->
@@ -15,7 +17,7 @@
         <div class="logo-nav-container">
           <div class="logo">
             <img
-              src="images/logo.webp"
+              src="../assets/photos/Multimedia Systems.svg"
               alt="شعار مقرر نظم الوسائط المتعددة"
               width="120"
               height="60"
@@ -32,7 +34,6 @@
           <nav class="navigation">
             <ul class="nav-list">
               <li><a href="../index.html" class="nav-link">الرئيسية</a></li>
-              <li><a href="../about.html" class="nav-link">عن المقرر</a></li>
               <li class="dropdown">
                 <a href="topics.html" class="nav-link">المواضيع</a>
                 <ul class="dropdown-menu">
@@ -67,14 +68,14 @@
             النظرية والتطبيق
           </p>
           <div class="hero-buttons">
-            <a href="topics.html" class="btn btn-primary">ابدأ التعلم</a>
-            <a href="videos.html" class="btn btn-secondary">شاهد الفيديوهات</a>
+            <a href="#start" class="btn btn-primary">ابدأ التعلم</a>
+            <a href="#mainVideo" class="btn btn-secondary">شاهد الفيديوهات</a>
           </div>
         </div>
         <div class="hero-media">
           <picture>
             <img
-              src="../assets/photos/انواع الوسائط الرقمية.jpeg"
+              src="../assets/photos/الوسائط البصرية.png"
               alt="رسم توضيحي للوسائط البصرية"
               class="hero-image"
               loading="lazy"
@@ -101,12 +102,14 @@
               <div class="video-wrapper">
                 <video
                   controls
-                  poster="../assets//photos/بوستر-فيديو الوسائط الرقمية.avif"
+                  poster="../assets//photos/الوسائط البصرية.jpg"
                   class="main-video"
                   id="mainVideo"
                 >
-                  <source src="../videos/visual-media.mp4" type="video/mp4" />
-                  <source src="../videos/visual-media.webm" type="video/webm" />
+                  <source
+                    src="../assets/videos/visual-media.mp4"
+                    type="video/mp4"
+                  />
                   <track
                     src="../videos/subtitles/visual-media.vtt"
                     kind="subtitles"
@@ -122,14 +125,39 @@
 
                 <!-- Custom Controls Overlay -->
                 <div class="custom-controls-overlay">
-                  <button class="play-pause-btn" id="playPauseBtn">
-                    <span class="play-icon">▶</span>
-                    <span class="pause-icon">⏸</span>
-                  </button>
-                  <div class="video-loading" id="videoLoading">
-                    <div class="loading-spinner"></div>
-                    <span>جاري التحميل...</span>
-                  </div>
+                  <svg
+                    version="1.1"
+                    id="play"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    x="0px"
+                    y="0px"
+                    height="100px"
+                    width="100px"
+                    viewBox="0 0 100 100"
+                    enable-background="new 0 0 100 100"
+                    xml:space="preserve"
+                  >
+                    <path
+                      class="stroke-solid"
+                      fill="none"
+                      stroke="white"
+                      d="M49.9,2.5C23.6,2.8,2.1,24.4,2.5,50.4C2.9,76.5,24.7,98,50.3,97.5c26.4-0.6,47.4-21.8,47.2-47.7
+    C97.3,23.7,75.7,2.3,49.9,2.5"
+                    />
+                    <path
+                      class="stroke-dotted"
+                      fill="none"
+                      stroke="white"
+                      d="M49.9,2.5C23.6,2.8,2.1,24.4,2.5,50.4C2.9,76.5,24.7,98,50.3,97.5c26.4-0.6,47.4-21.8,47.2-47.7
+    C97.3,23.7,75.7,2.3,49.9,2.5"
+                    />
+                    <path
+                      class="icon"
+                      fill="white"
+                      d="M38,69c-1,0.5-1.8,0-1.8-1.1V32.1c0-1.1,0.8-1.6,1.8-1.1l34,18c1,0.5,1,1.4,0,1.9L38,69z"
+                    />
+                  </svg>
                 </div>
               </div>
             </div>
@@ -265,7 +293,7 @@
     </section>
 
     <!-- Content Section Structure -->
-    <section class="content-section">
+    <section id="start" class="content-section">
       <div class="container">
         <!-- الفكرة 1: الوسائط البصرية الرقمية -->
         <div class="concept-block">
@@ -291,7 +319,7 @@
               </div>
               <div class="media-content">
                 <img
-                  src="../images/digital-media.avif"
+                  src="../assets/photos/الوسائط الرقمية المختلفة.png"
                   alt="أنواع الوسائط الرقمية المختلفة"
                   class="concept-image"
                 />
@@ -309,19 +337,6 @@
 
             <!-- النقطة 2 -->
             <div class="content-item reverse">
-              <div class="media-content">
-                <img
-                  src="../images/media-types.avif"
-                  alt="أنواع الوسائط الرقمية"
-                  class="concept-image"
-                />
-                <div class="audio-player">
-                  <audio controls>
-                    <source src="../audio/media-types.mp3" type="audio/mpeg" />
-                  </audio>
-                  <span>أنواع الوسائط الرقمية (4 دقائق)</span>
-                </div>
-              </div>
               <div class="text-content">
                 <h3>أنواع الوسائط الرقمية</h3>
                 <p class="paragraph">تشمل الوسائط الرقمية عدة أنواع رئيسية:</p>
@@ -343,6 +358,19 @@
                     البودكاست والموسيقى
                   </li>
                 </ul>
+              </div>
+            </div>
+            <div class="media-content">
+              <img
+                src="../assets/photos/الوسائط الرقمية.jpeg"
+                alt="أنواع الوسائط الرقمية"
+                class="concept-image"
+              />
+              <div class="audio-player">
+                <audio controls>
+                  <source src="../audio/media-types.mp3" type="audio/mpeg" />
+                </audio>
+                <span>أنواع الوسائط الرقمية (4 دقائق)</span>
               </div>
             </div>
           </div>
@@ -384,11 +412,6 @@
                 </ul>
               </div>
               <div class="media-content">
-                <img
-                  src="../images/digital-images.avif"
-                  alt="خصائص الصور الرقمية"
-                  class="concept-image"
-                />
                 <div class="audio-player">
                   <audio controls>
                     <source
@@ -403,19 +426,6 @@
 
             <!-- النقطة 2 -->
             <div class="content-item reverse">
-              <div class="media-content">
-                <img
-                  src="../images/image-types.avif"
-                  alt="أنواع الصور الرقمية"
-                  class="concept-image"
-                />
-                <div class="audio-player">
-                  <audio controls>
-                    <source src="../audio/image-types.mp3" type="audio/mpeg" />
-                  </audio>
-                  <span>أنواع الصور الرقمية (5 دقائق)</span>
-                </div>
-              </div>
               <div class="text-content">
                 <h3>أنواع الصور الرقمية</h3>
                 <p class="paragraph">تنقسم الصور الرقمية إلى نوعين رئيسيين:</p>
@@ -438,6 +448,19 @@
                       <li><strong>أمثلة:</strong> SVG, AI, EPS</li>
                     </ul>
                   </div>
+                </div>
+              </div>
+              <div class="media-content">
+                <img
+                  src="../assets/photos/انواع الصور الرقمية 2.jpg"
+                  alt="أنواع الصور الرقمية"
+                  class="concept-image"
+                />
+                <div class="audio-player">
+                  <audio controls>
+                    <source src="../audio/image-types.mp3" type="audio/mpeg" />
+                  </audio>
+                  <span>أنواع الصور الرقمية (5 دقائق)</span>
                 </div>
               </div>
             </div>
@@ -478,7 +501,7 @@
               </div>
               <div class="media-content">
                 <img
-                  src="../images/color-models.avif"
+                  src="../assets/photos/نماذج الالوان YUV و CMYK وRGB.jpg"
                   alt="نماذج الألوان RGB, CMYK, YUV"
                   class="concept-image"
                 />
@@ -493,22 +516,6 @@
 
             <!-- النقطة 4 -->
             <div class="content-item reverse">
-              <div class="media-content">
-                <img
-                  src="../assets/photos/تشكيل الصور وفي الكاميرات الرقمية.jpeg"
-                  alt="تشكيل الصور في الكاميرات الرقمية"
-                  class="concept-image"
-                />
-                <div class="audio-player">
-                  <audio controls>
-                    <source
-                      src="../audio/camera-formation.mp3"
-                      type="audio/mpeg"
-                    />
-                  </audio>
-                  <span>تشكيل الصور في الكاميرات (5 دقائق)</span>
-                </div>
-              </div>
               <div class="text-content">
                 <h3>تشكيل الصور في الكاميرات الرقمية</h3>
                 <p class="paragraph">
@@ -538,6 +545,22 @@
                   </li>
                   <li><strong>التخزين:</strong> في تنسيقات مثل JPEG أو RAW</li>
                 </ol>
+              </div>
+              <div class="media-content">
+                <img
+                  src="../assets/photos/تشكيل الصور وفي الكاميرات الرقمية.jpeg"
+                  alt="تشكيل الصور في الكاميرات الرقمية"
+                  class="concept-image"
+                />
+                <div class="audio-player">
+                  <audio controls>
+                    <source
+                      src="../audio/camera-formation.mp3"
+                      type="audio/mpeg"
+                    />
+                  </audio>
+                  <span>تشكيل الصور في الكاميرات (5 دقائق)</span>
+                </div>
               </div>
             </div>
           </div>
@@ -572,7 +595,7 @@
               </div>
               <div class="media-content">
                 <img
-                  src="../images/digital-video.avif"
+                  src="../assets/photos/خصائص الفيديو الرقمي --.jpg"
                   alt="خصائص الفيديو الرقمي"
                   class="concept-image"
                 />
@@ -590,22 +613,6 @@
 
             <!-- النقطة 2 -->
             <div class="content-item reverse">
-              <div class="media-content">
-                <img
-                  src="../images/analog-vs-digital.avif"
-                  alt="مقارنة بين الفيديو التماثلي والرقمي"
-                  class="concept-image"
-                />
-                <div class="audio-player">
-                  <audio controls>
-                    <source
-                      src="../audio/analog-digital.mp3"
-                      type="audio/mpeg"
-                    />
-                  </audio>
-                  <span>المقارنة بين التماثلي والرقمي (5 دقائق)</span>
-                </div>
-              </div>
               <div class="text-content">
                 <h3>الإشارات التماثلية والرقمية للفيديو</h3>
                 <div class="signal-comparison">
@@ -639,6 +646,22 @@
                       <li><strong>أنظمة:</strong> DV, HDV, AVCHD</li>
                     </ul>
                   </div>
+                </div>
+              </div>
+              <div class="media-content">
+                <img
+                  src="../assets/photos/مقارنة بين الفيديو الرقمي والتماثلي.png"
+                  alt="مقارنة بين الفيديو التماثلي والرقمي"
+                  class="concept-image"
+                />
+                <div class="audio-player">
+                  <audio controls>
+                    <source
+                      src="../audio/analog-digital.mp3"
+                      type="audio/mpeg"
+                    />
+                  </audio>
+                  <span>المقارنة بين التماثلي والرقمي (5 دقائق)</span>
                 </div>
               </div>
             </div>
@@ -685,7 +708,7 @@
               </div>
               <div class="media-content">
                 <img
-                  src="../images/video-resolution.avif"
+                  src="../assets/photos/دقة الفيديو ومعدل الاطارات.webp"
                   alt="دقة الفيديو ومعدل الإطارات"
                   class="concept-image"
                 />
@@ -744,7 +767,7 @@
                   </div>
                   <div class="media-content">
                     <img
-                      src="../assets/photos/"
+                      src="../assets/photos/معالجة الصور الرقمية.png"
                       alt="تقنيات المعالجة الرقمية"
                       class="concept-image"
                     />
@@ -771,22 +794,6 @@
               <div class="content-grid">
                 <!-- النقطة 1 -->
                 <div class="content-item reverse">
-                  <div class="media-content">
-                    <img
-                      src="../images/spatial-filters.avif"
-                      alt="المرشحات المكانية في معالجة الصور"
-                      class="concept-image"
-                    />
-                    <div class="audio-player">
-                      <audio controls>
-                        <source
-                          src="../audio/spatial-filters.mp3"
-                          type="audio/mpeg"
-                        />
-                      </audio>
-                      <span>المرشحات المكانية (5 دقائق)</span>
-                    </div>
-                  </div>
                   <div class="text-content">
                     <h3>تعريف المرشحات المكانية</h3>
                     <p class="paragraph">
@@ -815,6 +822,17 @@
                           المطلوب
                         </li>
                       </ol>
+                    </div>
+                  </div>
+                  <div class="media-content">
+                    <div class="audio-player">
+                      <audio controls>
+                        <source
+                          src="../audio/spatial-filters.mp3"
+                          type="audio/mpeg"
+                        />
+                      </audio>
+                      <span>المرشحات المكانية (5 دقائق)</span>
                     </div>
                   </div>
                 </div>
@@ -864,7 +882,7 @@
                   </div>
                   <div class="media-content">
                     <img
-                      src="../images/filter-applications.avif"
+                      src="../assets/photos/filter-applications.png"
                       alt="تطبيقات المرشحات المكانية"
                       class="concept-image"
                     />
@@ -942,7 +960,7 @@
                   </div>
                   <div class="media-content">
                     <img
-                      src="../images/fourier-transform.avif"
+                      src="../assets/photos/fourier-transform.jpg"
                       alt="تحويل فورييه والمرشحات الترددية"
                       class="concept-image"
                     />
@@ -960,22 +978,6 @@
 
                 <!-- النقطة 2 -->
                 <div class="content-item reverse">
-                  <div class="media-content">
-                    <img
-                      src="../images/frequency-applications.avif"
-                      alt="تطبيقات المرشحات الترددية"
-                      class="concept-image"
-                    />
-                    <div class="audio-player">
-                      <audio controls>
-                        <source
-                          src="../audio/frequency-applications.mp3"
-                          type="audio/mpeg"
-                        />
-                      </audio>
-                      <span>التطبيقات العملية (5 دقائق)</span>
-                    </div>
-                  </div>
                   <div class="text-content">
                     <h3>التطبيقات العملية والفرق بين المجالين</h3>
 
@@ -1000,7 +1002,6 @@
                         </li>
                       </ul>
                     </div>
-
                     <div class="domain-comparison">
                       <h4>الفرق بين المجال المكاني والترددي</h4>
                       <div class="comparison-table">
@@ -1022,6 +1023,17 @@
                             <li>يتطلب تحويلات رياضية</li>
                           </ul>
                         </div>
+                      </div>
+                    </div>
+                    <div class="media-content">
+                      <div class="audio-player">
+                        <audio controls>
+                          <source
+                            src="../audio/frequency-applications.mp3"
+                            type="audio/mpeg"
+                          />
+                        </audio>
+                        <span>التطبيقات العملية (5 دقائق)</span>
                       </div>
                     </div>
                   </div>
@@ -1094,7 +1106,7 @@
                   </div>
                   <div class="media-content">
                     <img
-                      src="../images/image-scaling.avif"
+                      src="../assets/photos/image-scaling.png"
                       alt="تقنيات تحجيم الصور"
                       class="concept-image"
                     />
@@ -1112,22 +1124,6 @@
 
                 <!-- النقطة 2 -->
                 <div class="content-item reverse">
-                  <div class="media-content">
-                    <img
-                      src="../images/quality-enhancement.avif"
-                      alt="خوارزميات تحسين الجودة"
-                      class="concept-image"
-                    />
-                    <div class="audio-player">
-                      <audio controls>
-                        <source
-                          src="../audio/quality-algorithms.mp3"
-                          type="audio/mpeg"
-                        />
-                      </audio>
-                      <span>خوارزميات التحسين (4 دقائق)</span>
-                    </div>
-                  </div>
                   <div class="text-content">
                     <h3>خوارزميات التحجيم والتحسين</h3>
 
@@ -1181,6 +1177,17 @@
                             <p>ضبط توازن الألوان لتبدو طبيعية</p>
                           </div>
                         </div>
+                      </div>
+                    </div>
+                    <div class="media-content">
+                      <div class="audio-player">
+                        <audio controls>
+                          <source
+                            src="../audio/quality-algorithms.mp3"
+                            type="audio/mpeg"
+                          />
+                        </audio>
+                        <span>خوارزميات التحسين (4 دقائق)</span>
                       </div>
                     </div>
                   </div>

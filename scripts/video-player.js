@@ -1,12 +1,10 @@
-// Enhanced Video Player Functionality
-class EnhancedVideoPlayer {
+class VideoPlayer {
   constructor() {
     this.video = document.getElementById("mainVideo");
-    this.playPauseBtn = document.getElementById("playPauseBtn");
+    this.playPauseBtn = document.getElementById("play");
     this.progressFill = document.getElementById("progressFill");
     this.progressThumb = document.getElementById("progressThumb");
     this.progressPercent = document.getElementById("progressPercent");
-    this.videoLoading = document.getElementById("videoLoading");
     this.addBookmarkBtn = document.getElementById("addBookmarkBtn");
     this.bookmarksList = document.getElementById("bookmarksList");
     this.chapterItems = document.querySelectorAll(".chapter-item");
@@ -28,10 +26,7 @@ class EnhancedVideoPlayer {
     // Video events
     this.video.addEventListener("play", () => this.updatePlayButton());
     this.video.addEventListener("pause", () => this.updatePlayButton());
-    this.video.addEventListener("waiting", () => this.showLoading());
-    this.video.addEventListener("canplay", () => this.hideLoading());
     this.video.addEventListener("timeupdate", () => this.updateProgress());
-    this.video.addEventListener("loadeddata", () => this.hideLoading());
 
     // Progress bar
     const progressBar = document.getElementById("progressBar");
@@ -63,14 +58,6 @@ class EnhancedVideoPlayer {
       playIcon.style.display = "none";
       pauseIcon.style.display = "block";
     }
-  }
-
-  showLoading() {
-    this.videoLoading.style.display = "flex";
-  }
-
-  hideLoading() {
-    this.videoLoading.style.display = "none";
   }
 
   updateProgress() {
@@ -214,7 +201,7 @@ class EnhancedVideoPlayer {
   }
 }
 
-// Initialize enhanced video player
+// Initialize video player
 document.addEventListener("DOMContentLoaded", () => {
-  new EnhancedVideoPlayer();
+  new VideoPlayer();
 });

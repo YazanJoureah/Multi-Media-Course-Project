@@ -140,23 +140,4 @@ document.addEventListener("DOMContentLoaded", function () {
       this.style.transform = "translateY(0) scale(1)";
     });
   });
-
-  // Performance monitoring
-  let loadTime =
-    performance.timing.loadEventEnd - performance.timing.navigationStart;
-  console.log("Page load time: " + loadTime + "ms");
-
-  // Service Worker Registration (for PWA)
-  if ("serviceWorker" in navigator) {
-    window.addEventListener("load", function () {
-      navigator.serviceWorker
-        .register("/sw.js")
-        .then(function (registration) {
-          console.log("ServiceWorker registration successful");
-        })
-        .catch(function (error) {
-          console.log("ServiceWorker registration failed: ", error);
-        });
-    });
-  }
 });
