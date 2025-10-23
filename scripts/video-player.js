@@ -77,7 +77,7 @@ class VideoPlayer {
   setupChapters() {
     this.chapterItems.forEach((chapter) => {
       chapter.addEventListener("click", () => {
-        const time = parseInt(chapter.dataset.time);
+        const time = parseInt(chapter.dataset.seconds);
         this.video.currentTime = time;
         this.video.play();
       });

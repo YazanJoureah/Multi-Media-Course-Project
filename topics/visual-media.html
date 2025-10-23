@@ -164,6 +164,28 @@
 
             <!-- Bottom Panels Section -->
             <div class="video-bottom-panels">
+              <!-- Progress Panel -->
+              <div class="panel progress-panel">
+                <div class="panel-header">
+                  <h3 class="panel-title">التقدم في المشاهدة</h3>
+                  <span class="progress-percent" id="progressPercent">0%</span>
+                </div>
+                <div class="panel-content">
+                  <div class="progress-bar-container">
+                    <div class="progress-bar" id="progressBar">
+                      <div class="progress-fill" id="progressFill"></div>
+                      <div class="progress-thumb" id="progressThumb"></div>
+                    </div>
+                  </div>
+                  <div class="bookmarks-container">
+                    <button class="bookmark-btn" id="addBookmarkBtn">
+                      <span>🔖</span>
+                      إضافة علامة
+                    </button>
+                    <div class="bookmarks-list" id="bookmarksList"></div>
+                  </div>
+                </div>
+              </div>
               <!-- Info Panel -->
               <div class="panel info-panel">
                 <div class="panel-header">
@@ -191,7 +213,7 @@
                       <span class="meta-icon">⏱️</span>
                       <div class="meta-content">
                         <span class="meta-label">المدة</span>
-                        <span class="meta-value">20 دقيقة</span>
+                        <span class="meta-value">35 دقيقة</span>
                       </div>
                     </div>
 
@@ -199,7 +221,7 @@
                       <span class="meta-icon">📺</span>
                       <div class="meta-content">
                         <span class="meta-label">الجودة</span>
-                        <span class="meta-value">1080p FHD</span>
+                        <span class="meta-value">720p FHD</span>
                       </div>
                     </div>
 
@@ -215,7 +237,7 @@
                       <span class="meta-icon">📊</span>
                       <div class="meta-content">
                         <span class="meta-label">الحجم</span>
-                        <span class="meta-value">150 ميجابايت</span>
+                        <span class="meta-value">130 ميجابايت</span>
                       </div>
                     </div>
                   </div>
@@ -248,41 +270,50 @@
                       <span class="chapter-time">00:00</span>
                       <span class="chapter-title">المقدمة والتعريف</span>
                     </button>
-                    <button class="chapter-item" data-time="120">
-                      <span class="chapter-time">02:00</span>
+                    <button class="chapter-item" data-seconds="110">
+                      <span class="chapter-time">01:50</span>
+                      <span class="chapter-title"
+                        >تعريف الوسائط البصرية الرقمية</span
+                      >
+                    </button>
+                    <button class="chapter-item" data-seconds="244">
+                      <span class="chapter-time">04:00</span>
+                      <span class="chapter-title">أنواع الوسائط الرقمية</span>
+                    </button>
+                    <button class="chapter-item" data-seconds="300">
+                      <span class="chapter-time">5:00</span>
                       <span class="chapter-title">الصور الرقمية</span>
                     </button>
-                    <button class="chapter-item" data-time="480">
-                      <span class="chapter-time">08:00</span>
+                    <button class="chapter-item" data-seconds="530">
+                      <span class="chapter-time">8:50</span>
+                      <span class="chapter-title">نماذج الالوان في الصور</span>
+                    </button>
+                    <button class="chapter-item" data-seconds="700">
+                      <span class="chapter-time">11:040</span>
+                      <span class="chapter-title"
+                        >الصور في الكمرات الرقمية</span
+                      >
+                    </button>
+                    <button class="chapter-item" data-seconds="915">
+                      <span class="chapter-time">15:15</span>
                       <span class="chapter-title">الفيديو الرقمي</span>
                     </button>
-                    <button class="chapter-item" data-time="900">
-                      <span class="chapter-time">15:00</span>
-                      <span class="chapter-title">التطبيقات العملية</span>
+                    <button class="chapter-item" data-seconds="1077">
+                      <span class="chapter-time">17:57</span>
+                      <span class="chapter-title"
+                        >الإشارات التماثلية والرقمية</span
+                      >
                     </button>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Progress Panel -->
-              <div class="panel progress-panel">
-                <div class="panel-header">
-                  <h3 class="panel-title">التقدم في المشاهدة</h3>
-                  <span class="progress-percent" id="progressPercent">0%</span>
-                </div>
-                <div class="panel-content">
-                  <div class="progress-bar-container">
-                    <div class="progress-bar" id="progressBar">
-                      <div class="progress-fill" id="progressFill"></div>
-                      <div class="progress-thumb" id="progressThumb"></div>
-                    </div>
-                  </div>
-                  <div class="bookmarks-container">
-                    <button class="bookmark-btn" id="addBookmarkBtn">
-                      <span>🔖</span>
-                      إضافة علامة
+                    <button class="chapter-item" data-seconds="1425">
+                      <span class="chapter-time">23:45</span>
+                      <span class="chapter-title"
+                        >دقة الفيديو ومعدل الإطارات</span
+                      >
                     </button>
-                    <div class="bookmarks-list" id="bookmarksList"></div>
+                    <button class="chapter-item" data-seconds="1590">
+                      <span class="chapter-time">26:30</span>
+                      <span class="chapter-title">تقنيات المعالجة</span>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -326,7 +357,7 @@
                 <div class="audio-player">
                   <audio controls>
                     <source
-                      src="../audio/digital-media.mp3"
+                      src="../assets/audio/digital-media.mp3"
                       type="audio/mpeg"
                     />
                   </audio>
@@ -368,7 +399,10 @@
               />
               <div class="audio-player">
                 <audio controls>
-                  <source src="../audio/media-types.mp3" type="audio/mpeg" />
+                  <source
+                    src="../assets/audio/media-types.mp3"
+                    type="audio/mpeg"
+                  />
                 </audio>
                 <span>أنواع الوسائط الرقمية (4 دقائق)</span>
               </div>
@@ -415,7 +449,7 @@
                 <div class="audio-player">
                   <audio controls>
                     <source
-                      src="../audio/digital-images.mp3"
+                      src="../assets/audio/digital-images.mp3"
                       type="audio/mpeg"
                     />
                   </audio>
@@ -458,7 +492,10 @@
                 />
                 <div class="audio-player">
                   <audio controls>
-                    <source src="../audio/image-types.mp3" type="audio/mpeg" />
+                    <source
+                      src="../assets/audio/image-types.mp3"
+                      type="audio/mpeg"
+                    />
                   </audio>
                   <span>أنواع الصور الرقمية (5 دقائق)</span>
                 </div>
@@ -507,7 +544,10 @@
                 />
                 <div class="audio-player">
                   <audio controls>
-                    <source src="../audio/color-models.mp3" type="audio/mpeg" />
+                    <source
+                      src="../assets/audio/color-models.mp3"
+                      type="audio/mpeg"
+                    />
                   </audio>
                   <span>نماذج الألوان (4 دقائق)</span>
                 </div>
@@ -555,7 +595,7 @@
                 <div class="audio-player">
                   <audio controls>
                     <source
-                      src="../audio/camera-formation.mp3"
+                      src="../assets/audio/camera-formation.mp3"
                       type="audio/mpeg"
                     />
                   </audio>
@@ -602,7 +642,7 @@
                 <div class="audio-player">
                   <audio controls>
                     <source
-                      src="../audio/digital-video.mp3"
+                      src="../assets/audio/digital-video.mp3"
                       type="audio/mpeg"
                     />
                   </audio>
@@ -657,7 +697,7 @@
                 <div class="audio-player">
                   <audio controls>
                     <source
-                      src="../audio/analog-digital.mp3"
+                      src="../assets/audio/analog-digital.mp3"
                       type="audio/mpeg"
                     />
                   </audio>
@@ -715,7 +755,7 @@
                 <div class="audio-player">
                   <audio controls>
                     <source
-                      src="../audio/video-quality.mp3"
+                      src="../assets/audio/video-quality.mp3"
                       type="audio/mpeg"
                     />
                   </audio>
@@ -774,7 +814,7 @@
                     <div class="audio-player">
                       <audio controls>
                         <source
-                          src="../audio/processing-techniques.mp3"
+                          src="../assets/audio/processing-techniques.mp3"
                           type="audio/mpeg"
                         />
                       </audio>
@@ -828,7 +868,7 @@
                     <div class="audio-player">
                       <audio controls>
                         <source
-                          src="../audio/spatial-filters.mp3"
+                          src="../assets/audio/spatial-filters.mp3"
                           type="audio/mpeg"
                         />
                       </audio>
@@ -889,7 +929,7 @@
                     <div class="audio-player">
                       <audio controls>
                         <source
-                          src="../audio/filter-applications.mp3"
+                          src="../assets/audio/filter-applications.mp3"
                           type="audio/mpeg"
                         />
                       </audio>
@@ -967,7 +1007,7 @@
                     <div class="audio-player">
                       <audio controls>
                         <source
-                          src="../audio/fourier-transform.mp3"
+                          src="../assets/audio/fourier-transform.mp3"
                           type="audio/mpeg"
                         />
                       </audio>
@@ -1029,7 +1069,7 @@
                       <div class="audio-player">
                         <audio controls>
                           <source
-                            src="../audio/frequency-applications.mp3"
+                            src="../assets/audio/frequency-applications.mp3"
                             type="audio/mpeg"
                           />
                         </audio>
@@ -1113,7 +1153,7 @@
                     <div class="audio-player">
                       <audio controls>
                         <source
-                          src="../audio/image-scaling.mp3"
+                          src="../assets/audio/image-scaling.mp3"
                           type="audio/mpeg"
                         />
                       </audio>
@@ -1183,7 +1223,7 @@
                       <div class="audio-player">
                         <audio controls>
                           <source
-                            src="../audio/quality-algorithms.mp3"
+                            src="../assets/audio/quality-algorithms.mp3"
                             type="audio/mpeg"
                           />
                         </audio>

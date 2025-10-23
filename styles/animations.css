@@ -1,6 +1,8 @@
 /* ===== Animations & Micro-interactions ===== */
 
-/* Fade In Animation */
+/* ===== Keyframe Animations ===== */
+
+/* Fade Animations */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -68,7 +70,7 @@
   }
 }
 
-/* Slide In Animation */
+/* Slide Animation */
 @keyframes slideInFromTop {
   from {
     transform: translateY(-100%);
@@ -101,14 +103,56 @@
   }
 }
 
+/* Loading Animation */
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Shine Effect */
+@keyframes shine {
+  0% {
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(100%) translateY(100%) rotate(45deg);
+  }
+}
+
+/* Floating Animation */
+@keyframes floating {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Play Button Animations */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 /* ===== Element Animations ===== */
 
-/* Header Animation */
+/* Layout Elements */
 .header {
   animation: slideInFromTop 0.5s ease-out;
 }
 
-/* Hero Section Animations */
+.footer {
+  animation: fadeIn 0.8s ease-out 0.5s both;
+}
+
+/* Hero Section */
 .hero-content {
   animation: fadeInLeft 0.8s ease-out 0.2s both;
 }
@@ -117,7 +161,7 @@
   animation: fadeInRight 0.8s ease-out 0.4s both;
 }
 
-/* Feature Cards Animation */
+/* Feature Cards */
 .feature-card {
   animation: fadeInUp 0.6s ease-out both;
 }
@@ -135,7 +179,7 @@
   animation-delay: 0.4s;
 }
 
-/* AI Section Animations */
+/* AI Section */
 .ai-text {
   animation: fadeInLeft 0.8s ease-out 0.2s both;
 }
@@ -144,24 +188,19 @@
   animation: fadeInRight 0.8s ease-out 0.4s both;
 }
 
-/* Video Section Animation */
+/* Video Section */
 .video-container {
   animation: fadeInUp 0.8s ease-out 0.3s both;
 }
 
-/* Footer Animation */
-.footer {
-  animation: fadeIn 0.8s ease-out 0.5s both;
-}
+/* ===== Hover Effects & Interactions ===== */
 
-/* ===== Hover Effects ===== */
-
-/* Logo Hover */
+/* Logo */
 .logo:hover {
   animation: pulse 0.6s ease-in-out;
 }
 
-/* Button Enhancements */
+/* Buttons */
 .btn {
   position: relative;
   overflow: hidden;
@@ -187,7 +226,11 @@
   left: 100%;
 }
 
-/* Feature Card Icon Animation */
+.btn:active {
+  transform: scale(0.98);
+}
+
+/* Feature Cards */
 .feature-icon {
   transition: var(--transition);
 }
@@ -197,12 +240,12 @@
   transform: scale(1.1);
 }
 
-/* AI Badge Animation */
+/* AI Badge */
 .ai-badge {
   animation: pulse 2s infinite;
 }
 
-/* Video Player Enhancements */
+/* Video Elements */
 .featured-video {
   transition: var(--transition);
 }
@@ -212,7 +255,7 @@
   box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15);
 }
 
-/* Navigation Link Underline Animation */
+/* Navigation */
 .nav-link::after {
   content: "";
   position: absolute;
@@ -230,22 +273,13 @@
   width: 20px;
 }
 
-/* ===== Loading Animations ===== */
+/* ===== Loading States ===== */
 
 /* Skeleton Loading */
 .skeleton {
   background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
   background-size: 200% 100%;
   animation: loading 1.5s infinite;
-}
-
-@keyframes loading {
-  0% {
-    background-position: 200% 0;
-  }
-  100% {
-    background-position: -200% 0;
-  }
 }
 
 /* ===== Scroll Animations ===== */
@@ -262,7 +296,9 @@
   transform: translateY(0);
 }
 
-/* ===== Progress Bar ===== */
+/* ===== Progress Indicators ===== */
+
+/* Progress Bar */
 .progress-bar {
   position: fixed;
   top: 0;
@@ -278,12 +314,7 @@
   transition: width 0.3s ease;
 }
 
-/* ===== Micro-interactions ===== */
-
-/* Click Feedback */
-.btn:active {
-  transform: scale(0.98);
-}
+/* ===== Focus Management ===== */
 
 /* Focus States */
 .btn:focus,
@@ -293,7 +324,9 @@
   outline-offset: 2px;
 }
 
-/* Smooth Transitions for All Interactive Elements */
+/* ===== Smooth Transitions ===== */
+
+/* Global Transitions */
 a,
 button,
 .feature-card,
@@ -340,47 +373,43 @@ img {
   animation: shine 3s infinite;
 }
 
-@keyframes shine {
-  0% {
-    transform: translateX(-100%) translateY(-100%) rotate(45deg);
-  }
-  100% {
-    transform: translateX(100%) translateY(100%) rotate(45deg);
-  }
-}
-
-/* Floating Animation */
+/* Floating Elements */
 .floating {
   animation: floating 3s ease-in-out infinite;
 }
 
-@keyframes floating {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
+/* ===== Play Button Animation ===== */
+
+/* Play Button Container */
+#play {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
 }
 
-/*Play Button Animation*/
-@-webkit-keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
+/* Play Button States */
+#play:hover .stroke-dotted {
+  stroke-width: 4px;
+  opacity: 1;
 }
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
+
+#play:hover .stroke-solid {
+  opacity: 0;
+  stroke-dashoffset: 300;
 }
+
+#play:hover .icon {
+  transform: scale(1.05);
+}
+
+/* Play Button Elements */
 .stroke-dotted {
   opacity: 0;
   stroke-dasharray: 4, 5;
   stroke-width: 1px;
   transform-origin: 50% 50%;
-  -webkit-animation: spin 4s infinite linear;
   animation: spin 4s infinite linear;
   transition: opacity 1s ease, stroke-width 1s ease;
 }
@@ -397,28 +426,9 @@ img {
   transition: transform 200ms ease-out;
 }
 
-#play:hover .stroke-dotted {
-  stroke-width: 4px;
-  opacity: 1;
-}
-#play:hover .stroke-solid {
-  opacity: 0;
-  stroke-dashoffset: 300;
-}
+/* ===== Accessibility & Performance ===== */
 
-#play:hover .icon {
-  transform: scale(1.05);
-}
-
-#play {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateY(-50%) translateX(-50%);
-}
-
-/* ===== Reduced Motion Support ===== */
+/* Reduced Motion Support */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
