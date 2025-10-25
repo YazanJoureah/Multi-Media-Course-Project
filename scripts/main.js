@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Mobile Navigation Toggle
   const navToggle = document.querySelector(".nav-toggle");
   const navigation = document.querySelector(".navigation");
+  const viewButtons = document.querySelectorAll(".view-btn");
 
   if (navToggle && navigation) {
     navToggle.addEventListener("click", function () {
@@ -139,5 +140,217 @@ document.addEventListener("DOMContentLoaded", function () {
     card.addEventListener("mouseleave", function () {
       this.style.transform = "translateY(0) scale(1)";
     });
+  });
+  // Create modal element
+  const modal = document.createElement("div");
+  modal.className = "image-modal";
+  modal.innerHTML = `
+    <div class="modal-overlay"></div>
+    <div class="modal-content">
+      <button class="modal-close">&times;</button>
+      <div class="modal-image-container">
+        <img class="modal-image" src="" alt="" />
+      </div>
+      <div class="modal-info">
+        <h3 class="modal-title"></h3>
+        <p class="modal-description"></p>
+        <div class="modal-meta">
+          <span class="modal-prompt"></span>
+        </div>
+      </div>
+    </div>
+  `;
+  document.body.appendChild(modal);
+
+  // Add CSS for the modal
+  const modalStyles = `
+    .image-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1000;
+      display: none;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    .image-modal.active {
+      display: block;
+      opacity: 1;
+    }
+    
+    .modal-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(5px);
+    }
+    
+    .modal-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.9);
+      background: white;
+      border-radius: 12px;
+      max-width: 90%;
+      max-height: 90%;
+      width: auto;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+    }
+    
+    .image-modal.active .modal-content {
+      transform: translate(-50%, -50%) scale(1);
+    }
+    
+    .modal-close {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      border: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      font-size: 20px;
+      cursor: pointer;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+    
+    .modal-close:hover {
+      background: rgba(0, 0, 0, 0.9);
+      transform: scale(1.1);
+    }
+    
+    .modal-image-container {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      max-height: 70vh;
+      overflow: hidden;
+    }
+    
+    .modal-image {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+    
+    .modal-info {
+      padding: 20px;
+      border-top: 1px solid #eee;
+      background: #f9f9f9;
+      border-bottom-left-radius: 12px;
+      border-bottom-right-radius: 12px;
+    }
+    
+    .modal-title {
+      margin: 0 0 10px 0;
+      color: #333;
+      font-size: 1.4em;
+    }
+    
+    .modal-description {
+      margin: 0 0 10px 0;
+      color: #666;
+      font-size: 0.9em;
+    }
+    
+    .modal-prompt {
+      color: #888;
+      font-size: 0.85em;
+      line-height: 1.4;
+      display: block;
+      padding: 10px;
+      background: white;
+      border-radius: 6px;
+      border-left: 3px solid #007bff;
+    }
+    
+    @media (max-width: 768px) {
+      .modal-content {
+        max-width: 95%;
+        max-height: 95%;
+      }
+      
+      .modal-image-container {
+        max-height: 60vh;
+        padding: 15px;
+      }
+      
+      .modal-info {
+        padding: 15px;
+      }
+      
+      .modal-title {
+        font-size: 1.2em;
+      }
+    }
+  `;
+
+  const styleSheet = document.createElement("style");
+  styleSheet.textContent = modalStyles;
+  document.head.appendChild(styleSheet);
+
+  // View button click handler
+  viewButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      const imageSrc = this.getAttribute("data-image");
+      const galleryItem = this.closest(".gallery-item");
+      const title = galleryItem.querySelector("h4").textContent;
+      const description =
+        galleryItem.querySelector(".image-info p").textContent;
+      const prompt = galleryItem.querySelector(".prompt").textContent;
+
+      // Set modal content
+      modal.querySelector(".modal-image").src = imageSrc;
+      modal.querySelector(".modal-image").alt = title;
+      modal.querySelector(".modal-title").textContent = title;
+      modal.querySelector(".modal-description").textContent = description;
+      modal.querySelector(".modal-prompt").textContent = prompt;
+
+      // Show modal
+      modal.classList.add("active");
+      document.body.style.overflow = "hidden"; // Prevent background scrolling
+    });
+  });
+
+  // Close modal functionality
+  function closeModal() {
+    modal.classList.remove("active");
+    document.body.style.overflow = ""; // Restore scrolling
+  }
+
+  // Close modal events
+  modal.querySelector(".modal-close").addEventListener("click", closeModal);
+  modal.querySelector(".modal-overlay").addEventListener("click", closeModal);
+
+  // Close modal with Escape key
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && modal.classList.contains("active")) {
+      closeModal();
+    }
+  });
+
+  // Prevent modal content click from closing modal
+  modal.querySelector(".modal-content").addEventListener("click", function (e) {
+    e.stopPropagation();
   });
 });

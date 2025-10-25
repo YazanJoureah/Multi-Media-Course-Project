@@ -69,8 +69,8 @@
             أحجام البيانات.
           </p>
           <div class="hero-buttons">
-            <a href="topics.html" class="btn btn-primary">ابدأ التعلم</a>
-            <a href="videos.html" class="btn btn-secondary">شاهد الفيديوهات</a>
+            <a href="#start" class="btn btn-primary">ابدأ التعلم</a>
+            <a href="#video" class="btn btn-secondary">شاهد الفيديوهات</a>
           </div>
         </div>
         <div class="hero-media">
@@ -87,7 +87,7 @@
     </section>
 
     <!-- Main Video Section -->
-    <section class="video-hero-section">
+    <section id="video" class="video-hero-section">
       <div class="container">
         <div class="video-hero-content">
           <div class="video-header">
@@ -103,7 +103,7 @@
               <div class="video-wrapper">
                 <video
                   controls
-                  poster="../assets/photos/compression-video-poster.avif"
+                  poster="../assets/photos/IMG-20251024-WA0003.jpg"
                   class="main-video"
                   id="mainVideo"
                 >
@@ -303,7 +303,7 @@
       <div class="container">
         <!-- الفكرة 1: مقدمة في تقنيات الضغط -->
         <div class="concept-block">
-          <h2 class="concept-title">🌐 مقدمة في تقنيات الضغط</h2>
+          <h2 id="start" class="concept-title">🌐 مقدمة في تقنيات الضغط</h2>
 
           <div class="content-grid">
             <!-- النقطة 1 -->
@@ -335,7 +335,7 @@
                 <div class="audio-player">
                   <audio controls>
                     <source
-                      src="../audio/compression-intro.mp3"
+                      src="../assets/audio/compression-intro.mp3"
                       type="audio/mpeg"
                     />
                   </audio>
@@ -355,7 +355,7 @@
                 <div class="audio-player">
                   <audio controls>
                     <source
-                      src="../audio/compression-chars.mp3"
+                      src="../assets/audio/compression-chars.mp3"
                       type="audio/mpeg"
                     />
                   </audio>
@@ -430,12 +430,12 @@
                 </ul>
               </div>
               <div class="media-content">
-                <img src="../images/lossless-compression.avif" altالضغط غير
+                <img src="../assets/photos/IMG-20251024-WA0004.jpg" altالضغط غير
                 المضيع" class="concept-image" />
                 <div class="audio-player">
                   <audio controls>
                     <source
-                      src="../audio/lossless-compression.mp3"
+                      src="../assets/audio/lossless-compression.mp3"
                       type="audio/mpeg"
                     />
                   </audio>
@@ -446,22 +446,6 @@
 
             <!-- النقطة 2 -->
             <div class="content-item reverse">
-              <div class="media-content">
-                <img
-                  src="../images/huffman-coding.avif"
-                  alt="ترميز هوفمان"
-                  class="concept-image"
-                />
-                <div class="audio-player">
-                  <audio controls>
-                    <source
-                      src="../audio/huffman-coding.mp3"
-                      type="audio/mpeg"
-                    />
-                  </audio>
-                  <span>ترميز هوفمان (5 دقائق)</span>
-                </div>
-              </div>
               <div class="text-content">
                 <h3>تقنيات الضغط غير المضيع</h3>
                 <p class="paragraph">أهم تقنيات الضغط غير المضيع:</p>
@@ -486,6 +470,22 @@
                       </li>
                     </ul>
                   </div>
+                </div>
+              </div>
+              <div class="media-content">
+                <img
+                  src="../assets/photos/IMG-20251024-WA0005.jpg"
+                  alt="ترميز هوفمان"
+                  class="concept-image"
+                />
+                <div class="audio-player">
+                  <audio controls>
+                    <source
+                      src="../assets/audio/huffman-coding.mp3"
+                      type="audio/mpeg"
+                    />
+                  </audio>
+                  <span>ترميز هوفمان (5 دقائق)</span>
                 </div>
               </div>
             </div>
@@ -532,7 +532,7 @@
                 <div class="audio-player">
                   <audio controls>
                     <source
-                      src="../audio/information-theory.mp3"
+                      src="../assets/audio/information-theory.mp3"
                       type="audio/mpeg"
                     />
                   </audio>
@@ -587,7 +587,7 @@
                 <div class="audio-player">
                   <audio controls>
                     <source
-                      src="../audio/lossy-compression.mp3"
+                      src="../assets/audio/lossy-compression.mp3"
                       type="audio/mpeg"
                     />
                   </audio>
@@ -598,22 +598,6 @@
 
             <!-- النقطة 2 -->
             <div class="content-item reverse">
-              <div class="media-content">
-                <img
-                  src="../images/psychoacoustic-model.avif"
-                  alt="النموذج السمعي/البصري"
-                  class="concept-image"
-                />
-                <div class="audio-player">
-                  <audio controls>
-                    <source
-                      src="../audio/psychoacoustic-model.mp3"
-                      type="audio/mpeg"
-                    />
-                  </audio>
-                  <span>النموذج السمعي/البصري (5 دقائق)</span>
-                </div>
-              </div>
               <div class="text-content">
                 <h3>النموذج السمعي/البصري</h3>
                 <p class="paragraph">
@@ -640,6 +624,22 @@
                       <li><strong>التطبيقات:</strong> MP3, AAC</li>
                     </ul>
                   </div>
+                </div>
+              </div>
+              <div class="media-content">
+                <img
+                  src="../assets/photos/IMG-20251024-WA0006.jpg"
+                  alt="النموذج السمعي/البصري"
+                  class="concept-image"
+                />
+                <div class="audio-player">
+                  <audio controls>
+                    <source
+                      src="../assets/audio/psychoacoustic-model.mp3"
+                      type="audio/mpeg"
+                    />
+                  </audio>
+                  <span>النموذج السمعي/البصري (5 دقائق)</span>
                 </div>
               </div>
             </div>
@@ -698,7 +698,7 @@
                 <div class="audio-player">
                   <audio controls>
                     <source
-                      src="../audio/dct-quantization.mp3"
+                      src="../assets/audio/dct-quantization.mp3"
                       type="audio/mpeg"
                     />
                   </audio>
@@ -749,14 +749,14 @@
               </div>
               <div class="media-content">
                 <img
-                  src="../images/jpeg-compression.avif"
+                  src="../assets/photos/IMG-20251024-WA0008.jpg"
                   alt="معيار ضغط JPEG"
                   class="concept-image"
                 />
                 <div class="audio-player">
                   <audio controls>
                     <source
-                      src="../audio/jpeg-compression.mp3"
+                      src="../assets/audio/jpeg-compression.mp3"
                       type="audio/mpeg"
                     />
                   </audio>
@@ -767,22 +767,6 @@
 
             <!-- النقطة 2 -->
             <div class="content-item reverse">
-              <div class="media-content">
-                <img
-                  src="../images/png-compression.avif"
-                  alt="معيار ضغط PNG"
-                  class="concept-image"
-                />
-                <div class="audio-player">
-                  <audio controls>
-                    <source
-                      src="../audio/png-compression.mp3"
-                      type="audio/mpeg"
-                    />
-                  </audio>
-                  <span>معيار PNG (4 دقائق)</span>
-                </div>
-              </div>
               <div class="text-content">
                 <h3>معيار PNG</h3>
                 <p class="paragraph">
@@ -810,6 +794,22 @@
                       <li>يحسن من كفاءة الضغط النهائية</li>
                     </ul>
                   </div>
+                </div>
+              </div>
+              <div class="media-content">
+                <img
+                  src="../assets/photos/IMG-20251024-WA0009.jpg"
+                  alt="معيار ضغط PNG"
+                  class="concept-image"
+                />
+                <div class="audio-player">
+                  <audio controls>
+                    <source
+                      src="../assets/audio/png-compression.mp3"
+                      type="audio/mpeg"
+                    />
+                  </audio>
+                  <span>معيار PNG (4 دقائق)</span>
                 </div>
               </div>
             </div>
@@ -847,13 +847,16 @@
               </div>
               <div class="media-content">
                 <img
-                  src="../images/png-types.avif"
+                  src="../assets/photos/IMG-20251024-WA0010.jpg"
                   alt="أنواع PNG"
                   class="concept-image"
                 />
                 <div class="audio-player">
                   <audio controls>
-                    <source src="../audio/png-types.mp3" type="audio/mpeg" />
+                    <source
+                      src="../assets/audio/png-types.mp3"
+                      type="audio/mpeg"
+                    />
                   </audio>
                   <span>أنواع PNG (4 دقائق)</span>
                 </div>
@@ -898,14 +901,14 @@
               </div>
               <div class="media-content">
                 <img
-                  src="../images/h264-compression.avif"
+                  src="../assets/photos/IMG-20251024-WA0011.jpg"
                   alt="معيار H.264/AVC"
                   class="concept-image"
                 />
                 <div class="audio-player">
                   <audio controls>
                     <source
-                      src="../audio/h264-compression.mp3"
+                      src="../assets/audio/h264-compression.mp3"
                       type="audio/mpeg"
                     />
                   </audio>
@@ -916,22 +919,6 @@
 
             <!-- النقطة 2 -->
             <div class="content-item reverse">
-              <div class="media-content">
-                <img
-                  src="../images/h265-compression.avif"
-                  alt="معيار H.265/HEVC"
-                  class="concept-image"
-                />
-                <div class="audio-player">
-                  <audio controls>
-                    <source
-                      src="../audio/h265-compression.mp3"
-                      type="audio/mpeg"
-                    />
-                  </audio>
-                  <span>معيار H.265 (5 دقائق)</span>
-                </div>
-              </div>
               <div class="text-content">
                 <h3>معيار H.265/HEVC</h3>
                 <p class="paragraph">
@@ -980,6 +967,22 @@
                       </li>
                     </ul>
                   </div>
+                </div>
+              </div>
+              <div class="media-content">
+                <img
+                  src="../assets/photos/IMG-20251024-WA0012.jpg"
+                  alt="معيار H.265/HEVC"
+                  class="concept-image"
+                />
+                <div class="audio-player">
+                  <audio controls>
+                    <source
+                      src="../assets/audio/h265-compression.mp3"
+                      type="audio/mpeg"
+                    />
+                  </audio>
+                  <span>معيار H.265 (5 دقائق)</span>
                 </div>
               </div>
             </div>
@@ -1040,14 +1043,14 @@
               </div>
               <div class="media-content">
                 <img
-                  src="../images/mp3-compression.avif"
+                  src="../assets/photos/IMG-20251024-WA0013.jpg"
                   alt="معيار ضغط MP3"
                   class="concept-image"
                 />
                 <div class="audio-player">
                   <audio controls>
                     <source
-                      src="../audio/mp3-compression.mp3"
+                      src="../assets/audio/mp3-compression.mp3"
                       type="audio/mpeg"
                     />
                   </audio>
@@ -1058,22 +1061,6 @@
 
             <!-- النقطة 2 -->
             <div class="content-item reverse">
-              <div class="media-content">
-                <img
-                  src="../images/aac-compression.avif"
-                  alt="معيار ضغط AAC"
-                  class="concept-image"
-                />
-                <div class="audio-player">
-                  <audio controls>
-                    <source
-                      src="../audio/aac-compression.mp3"
-                      type="audio/mpeg"
-                    />
-                  </audio>
-                  <span>معيار AAC (5 دقائق)</span>
-                </div>
-              </div>
               <div class="text-content">
                 <h3>معيار AAC</h3>
                 <p class="paragraph">
@@ -1122,6 +1109,22 @@
                   </div>
                 </div>
               </div>
+              <div class="media-content">
+                <img
+                  src="../assets/photos/IMG-20251024-WA0014.jpg"
+                  alt="معيار ضغط AAC"
+                  class="concept-image"
+                />
+                <div class="audio-player">
+                  <audio controls>
+                    <source
+                      src="../assets/audio/aac-compression.mp3"
+                      type="audio/mpeg"
+                    />
+                  </audio>
+                  <span>معيار AAC (5 دقائق)</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -1165,7 +1168,7 @@
                 <div class="audio-player">
                   <audio controls>
                     <source
-                      src="../audio/compression-tools.mp3"
+                      src="../assets/audio/compression-tools.mp3"
                       type="audio/mpeg"
                     />
                   </audio>
@@ -1176,22 +1179,6 @@
 
             <!-- النقطة 2 -->
             <div class="content-item reverse">
-              <div class="media-content">
-                <img
-                  src="../images/compression-metrics.avif"
-                  alt="مقاييس جودة الضغط"
-                  class="concept-image"
-                />
-                <div class="audio-player">
-                  <audio controls>
-                    <source
-                      src="../audio/compression-metrics.mp3"
-                      type="audio/mpeg"
-                    />
-                  </audio>
-                  <span>مقاييس جودة الضغط (5 دقائق)</span>
-                </div>
-              </div>
               <div class="text-content">
                 <h3>مقاييس الجودة الشائعة</h3>
                 <p class="paragraph">
@@ -1216,6 +1203,22 @@
                       <li>يقيس التشابه الهيكلي بين الصورة الأصلية والمضغوطة</li>
                     </ul>
                   </div>
+                </div>
+              </div>
+              <div class="media-content">
+                <img
+                  src="../assets/photos/IMG-20251024-WA0015.jpg"
+                  alt="مقاييس جودة الضغط"
+                  class="concept-image"
+                />
+                <div class="audio-player">
+                  <audio controls>
+                    <source
+                      src="../assets/audio/compression-metrics.mp3"
+                      type="audio/mpeg"
+                    />
+                  </audio>
+                  <span>مقاييس جودة الضغط (5 دقائق)</span>
                 </div>
               </div>
             </div>
@@ -1267,14 +1270,14 @@
               </div>
               <div class="media-content">
                 <img
-                  src="../images/compression-applications.avif"
+                  src="../assets/photos/IMG-20251024-WA0016.jpg"
                   alt="استخدامات أدوات مقارنة الضغط"
                   class="concept-image"
                 />
                 <div class="audio-player">
                   <audio controls>
                     <source
-                      src="../audio/compression-applications.mp3"
+                      src="../assets/audio/compression-applications.mp3"
                       type="audio/mpeg"
                     />
                   </audio>
@@ -1287,11 +1290,55 @@
       </div>
     </section>
 
+    <!-- Footer -->
     <footer class="footer">
       <div class="container">
-        <p>
-          &copy; 2025 مقرر نظم الوسائط المتعددة - الجامعة الافتراضية السورية
-        </p>
+        <div class="footer-content">
+          <div class="footer-section">
+            <div class="footer-logo">
+              <img
+                src="../assets/photos/Multimedia Systems Vertical logo.svg"
+                alt="شعار الموقع"
+                width="80"
+                height="40"
+              />
+              <span>نظم الوسائط المتعددة</span>
+            </div>
+            <p>
+              موقع تعليمي تفاعلي لمقرر نظم الوسائط المتعددة - الجامعة الافتراضية
+              السورية
+            </p>
+          </div>
+
+          <div class="footer-section">
+            <h4>روابط سريعة</h4>
+            <ul class="footer-links">
+              <li><a href="../index.html">الرئيسية</a></li>
+              <li><a href="./visual-media.html">المواضيع</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h4>معلومات الاتصال</h4>
+            <address>
+              الجامعة الافتراضية السورية<br />
+              دمشق، سوريا<br />
+              <a href="mailto:info@svuonline.org">info@svuonline.org</a>
+            </address>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            &copy; 2025 مقرر نظم الوسائط المتعددة - الجامعة الافتراضية السورية.
+            جميع الحقوق محفوظة.
+          </p>
+          <div class="footer-badges">
+            <span class="badge">مدعوم بالذكاء الاصطناعي</span>
+            <span class="badge">تصميم متجاوب</span>
+            <span class="badge">وسائط متعددة غنية</span>
+          </div>
+        </div>
       </div>
     </footer>
 
